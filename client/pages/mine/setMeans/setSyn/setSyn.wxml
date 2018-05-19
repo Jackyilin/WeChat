@@ -1,0 +1,9 @@
+
+<view class='msg'>
+  <view class='title'>公司简介</view>
+  <input placeholder='点击输入公司简介' bindinput='getValue'></input>
+</view>
+
+  <view class='setMsg'>
+    <view class='setText' bindtap='yes'>确定</view>
+  </view>

@@ -1,0 +1,78 @@
+/**publish.wxss**/
+.container {
+  padding: 20rpx;
+}
+
+.header {
+  text-align: center;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 400rpx;
+}
+
+.input {
+  font-size: 28rpx;
+}
+
+.title {
+  font-size: 28rpx;
+  width: 20%;
+  margin: 18rpx;
+}
+
+.publish {
+  position: center;
+}
+
+.uploadPic {
+  border: 1px dashed #e5e5e5;
+  /* height: 121rpx;
+  width: 121rpx; */
+}
+
+.addPicTitle {
+  font-size: 28rpx;
+  padding: 18rpx;
+  display: block;
+}
+
+.picker {
+  font-size: 28rpx;
+}
+
+.publish {
+  background-color: #7fc7a1;
+  color: white;
+  margin-top: 70rpx;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.model {
+  flex: 1;
+  margin: 18rpx;
+}
+
+.all{
+  border-bottom: 1px solid #e5e5e5;
+}

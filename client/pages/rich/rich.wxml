@@ -1,0 +1,71 @@
+<import src="./myrich/myrich.wxml"></import>
+<!--导航条-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+<!--致富光荣榜-->
+<view class='glorylist' hidden="{{currentTab!==0}}">
+  <scroll-view scroll-y="ture" class='scrollList'>
+    <!-- regin start  -->
+    <view class='regionPlace'>
+      <image src='../../mock/images/common/icon_10.png'>当前地点</image>
+      <text>当前地点</text>
+    </view>
+    <view class='region'>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          <view class="selectRegion">
+            <image src='../../mock/images/rich/tab.png'></image>
+            <text class='tabChange'>点击切换</text>
+          </view>
+          <view class="area-total">
+            <view class="area-common">{{region[0]}}</view>
+            <view class="area-common">{{region[1]}}</view>
+            <view class="area-common">{{region[2]}}</view>
+          </view>
+        </view>
+      </picker>
+      <!-- <view class="picker">
+                <view class="selectRegion">
+                    <view class="area">
+                          <address  id="address" bindmyevent='OnMyEvent'></address> 
+                         <view class="area-change">点击切换</view>  
+                         <view class="area-total">
+                            <view class="area-common">{{area[0]}}</view>
+                            <view class="area-common">{{area[1]}}</view>
+                            <view class="area-common">{{area[2]}}</view>
+                        </view> 
+                    </view>
+
+                </view>
+            </view> -->
+    </view>
+    <!-- regin end  -->
+    <view wx:if="{{hiddenData}}">
+      <view class="demoimg">
+        <image src='../../mock/images/common/null.png'></image>
+      </view>
+      <text class='demodata'>您的数据是空的 ~ ~ ~</text>
+    </view>
+    <!--kongde start  -->
+    <!--kongde end  -->
+    <!-- richbox start  -->
+    <view class='richBox flex-wrap' wx:for="{{objectRich}}" wx:key="unique">
+      <image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=129771793,4261276138&fm=27&gp=0.jpg' class='headPhoto'></image>
+      <view class='detail'>
+        <view class='name-wrap'>
+          <text class="name">姓名：<text class='varColor'>{{item.name}}</text></text>
+          <text class="time">时间：<text class='varColor'>{{item.richTime}}</text></text>
+        </view>
+        <view class='fontColor'>
+          <text class="place">地区：<text class='varColor'>{{item.region1}}{{item.region2}}{{item.region3}}</text></text>
+        </view>
+      </view>
+    </view>
+    <!-- richbox end  -->
+  </scroll-view>
+</view>
+<!--我要致富-->
+<view hidden="{{currentTab!==1}}" class="myrich">
+  <template is="myrich" data="{{...myrich}}"></template>
+</view>

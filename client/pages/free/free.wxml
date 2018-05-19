@@ -1,0 +1,426 @@
+<!--pages/free/free.wxml-->
+<view class='searchbox'>
+  <input class='search' placeholder='请输入规格，交货地，品牌' placeholder-style='color:#fff;font-size:28rpx' disabled='true' bindtap='tosearch'></input>
+</view>
+<view class='box'>
+  <swiper class='swiper' indicator-dots="true"
+  indicator-color='white' indicator-active-color='#7fc7a1' autoplay="true" interval="5000" duration="1000" circular="true">
+  <block wx:for="{{swiper}}" wx:key="{{index}}">    
+          <swiper-item>    
+            <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>    
+          </swiper-item>    
+        </block>    
+  </swiper>
+  <view class='header' bindtap='toOrder'>
+    <image class='ordericon' src='../../mock/images/common/index_999.png'></image>
+  </view>
+
+
+  <view class='bigChoose'>
+    <view class='kind'>
+     <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" custom-item="{{customItem}}">
+      <image src='../../mock/images/common/index_998.png' class='bigicon'></image>
+    </picker>
+    </view>
+    <view class='area'>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <image src='../../mock/images/common/index_997.png' class='bigicon'></image>
+    </picker>
+    </view> 
+  </view>
+
+</view> 
+
+<view class='swiper-tab'>
+  <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav"><image  class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav" src='../../mock/images/common/index_06.png' class='icon'></image><text class='smalltext'>推荐</text></view>
+  <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav"><image  class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav" src='../../mock/images/common/index_05.png' class='icon'></image><text class='smalltext'>即时</text></view>
+  <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav"><image  class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav" src='../../mock/images/common/index_07.png' class='icon'></image><text class='smalltext'>历史</text></view>
+  <view class="tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav"><image  class="tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav" src='../../mock/images/common/index_09.png' class='icon'></image><text class='smalltext'>买</text></view>
+  <view class="tab-item {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav"><image  class="tab-item {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav" src='../../mock/images/common/index_11.png' class='icon'></image><text class='smalltext'>卖</text></view>
+</view>
+<view class='publish' bindtap='toPublish'><image src='../../mock/images/common/index_26.png' class='publishicon'></image></view>  
+  
+
+
+<swiper current="{{currentTab}}" duration="200" bindchange="swiperChange" style='height:562rpx;'>  
+    <swiper-item>  
+      <scroll-view scroll-y='true' style="height: 562rpx;">
+        <block wx:for="{{recommend}}" wx:key="{{index}}" >
+          <view class="{{item.type==1?'message-buy':'message-sell'}}" bindtap="{{item.type==1?'toBuy':'tosellers'}}" data-fb="{{item.fb_id}}">
+            <view class='mesheader'>
+              <view class='sbkind'>
+              <block wx:if="{{item.type==1}}">
+              <image src='../../mock/images/common/index_19.png' class='iconsellbuy'></image>
+              </block>
+              <block wx:else>
+              <image src='../../mock/images/common/index_29.png' class='iconsellbuy'></image>
+              </block>
+
+              <view class='meskind'>{{item.category}}</view>
+              </view>
+              <view class='sbprice'>
+              <block wx:if="{{item.type==1}}">
+              <image src='../../mock/images/common/index_22.png' class='icon-bprice'></image>
+              </block>
+              <block wx:else>
+              <image src='../../mock/images/common/index_30.png' class='icon-bprice'></image>
+              </block>
+              <view class="{{item.type==1?'mes-bprice':'mes-sprice'}}">{{item.price}}元/{{item.unit}}</view> 
+              </view>
+            </view>
+            <view class='mescontent'>
+              <view class='mctop'>
+                <view class='brand'><text class='mes' decode='true'>品&emsp;牌：</text><text class='mestext'>{{item.brand}}</text></view>
+                <view class='quantity'><text class='mes' decode='true'>数量：</text><text class='mestext'>{{item.amount}}{{item.unit}}</text></view>
+              </view>
+              <view class='mcmid'>
+                <view class='del-place'><text class='mes' decode='true'>交货地：</text><text class='mestext'>{{item.place}}</text></view>
+                <view class='norms'><text class='mes' decode='true'>规格：</text><text class='mestext'>{{item.standard}}</text></view>
+              </view>
+              <view class='mcbottom'>
+              <view class='mcbleft'> 
+              <block wx:if="{{item.type==1}}">
+              <image class='onlinebuy' src='../../mock/images/common/index_78.png'></image>
+                    <image wx:if="{{true}}" class='personal' src='../../mock/images/common/index_13.png'></image>
+                     <image wx:else class='personal' src='../../mock/images/common/index_34.png'></image>
+
+                    <image wx:if="{{item.realNameIdentity}}" class='realname' src='../../mock/images/common/index_12.png'></image>
+                    <image wx:else class='realname' src='../../mock/images/common/index_36.png'></image>
+                    
+                    <image wx:if="{{item.cofcoIdentity}}"  class='vip' src='../../mock/images/common/index_20.png'></image>
+                    <image wx:else class='vip' src='../../mock/images/common/index_01.png'></image>
+
+                    <image wx:if="{{item.ismember}}"  class='merchant' src='../../mock/images/common/index_21.png'></image>
+                    <image wx:else class='merchant' src='../../mock/images/common/index_02.png'></image>
+
+                    <image wx:if="{{item.serviceAuthority}}"  class='coop' src='../../mock/images/common/index_14.png'></image>
+                    <image wx:else class='coop' src='../../mock/images/common/index_03.png'></image>
+              </block>
+              <block wx:else>
+              <image class='onlinebuy' src='../../mock/images/common/index_59.png'></image>
+                    <image wx:if="{{true}}" class='personal' src='../../mock/images/common/index_44.png'></image>
+                     <image wx:else class='personal' src='../../mock/images/common/index_34.png'></image>
+
+                    <image wx:if="{{item.realNameIdentity}}" class='realname' src='../../mock/images/common/index_45.png'></image>
+                    <image wx:else class='realname' src='../../mock/images/common/index_36.png'></image>
+                    
+                    <image wx:if="{{item.cofcoIdentity}}"  class='vip' src='../../mock/images/common/hh_30.png'></image>
+                    <image wx:else class='vip' src='../../mock/images/common/index_01.png'></image>
+
+                    <image wx:if="{{item.ismember}}"  class='merchant' src='../../mock/images/common/hh_31.png'></image>
+                    <image wx:else class='merchant' src='../../mock/images/common/index_02.png'></image>
+
+                    <image wx:if="{{item.serviceAuthority}}"  class='coop' src='../../mock/images/common/hh_32.png'></image>
+                    <image wx:else class='coop' src='../../mock/images/common/index_03.png'></image>
+              </block>
+              </view>
+              <view class='mcbright'>
+              <image class='time' src='../../mock/images/common/index_48.png'></image><text class='mestext'>{{item.create_time}}</text>
+              </view>
+            </view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>  
+   
+    <swiper-item>  
+       <scroll-view scroll-y='true' style="height: 562rpx;">
+        <block wx:for="{{realTime}}" wx:key="{{index}}" >
+          <view class="{{item.type==1?'message-buy':'message-sell'}}" bindtap="{{item.type==1?'toBuy':'tosellers'}}" data-fb="{{item.fb_id}}">
+            <view class='mesheader'>
+              <view class='sbkind'>
+              <block wx:if="{{item.type==1}}">
+              <image src='../../mock/images/common/index_19.png' class='iconsellbuy'></image>
+              </block>
+              <block wx:else>
+              <image src='../../mock/images/common/index_29.png' class='iconsellbuy'></image>
+              </block>
+
+              <view class='meskind'>{{item.category}}</view>
+              </view>
+              <view class='sbprice'>
+              <block wx:if="{{item.type==1}}">
+              <image src='../../mock/images/common/index_22.png' class='icon-bprice'></image>
+              </block>
+              <block wx:else>
+              <image src='../../mock/images/common/index_30.png' class='icon-bprice'></image>
+              </block>
+              <view class="{{item.type==1?'mes-bprice':'mes-sprice'}}">{{item.price}}元/{{item.unit}}</view> 
+              </view>
+            </view>
+            <view class='mescontent'>
+              <view class='mctop'>
+                <view class='brand'><text class='mes' decode='true'>品&emsp;牌：</text><text class='mestext'>{{item.brand}}</text></view>
+                <view class='quantity'><text class='mes' decode='true'>数量：</text><text class='mestext'>{{item.amount}}{{item.unit}}</text></view>
+              </view>
+              <view class='mcmid'>
+                <view class='del-place'><text class='mes' decode='true'>交货地：</text><text class='mestext'>{{item.place}}</text></view>
+                <view class='norms'><text class='mes' decode='true'>规格：</text><text class='mestext'>{{item.standard}}</text></view>
+              </view>
+              <view class='mcbottom'>
+              <view class='mcbleft'> 
+              <block wx:if="{{item.type==1}}">
+              <image class='onlinebuy' src='../../mock/images/common/index_78.png'></image>
+                    <image wx:if="{{true}}" class='personal' src='../../mock/images/common/index_13.png'></image>
+                     <image wx:else class='personal' src='../../mock/images/common/index_34.png'></image>
+
+                    <image wx:if="{{item.realNameIdentity}}" class='realname' src='../../mock/images/common/index_12.png'></image>
+                    <image wx:else class='realname' src='../../mock/images/common/index_36.png'></image>
+                    
+                    <image wx:if="{{item.cofcoIdentity}}"  class='vip' src='../../mock/images/common/index_20.png'></image>
+                    <image wx:else class='vip' src='../../mock/images/common/index_01.png'></image>
+
+                    <image wx:if="{{item.ismember}}"  class='merchant' src='../../mock/images/common/index_21.png'></image>
+                    <image wx:else class='merchant' src='../../mock/images/common/index_02.png'></image>
+
+                    <image wx:if="{{item.serviceAuthority}}"  class='coop' src='../../mock/images/common/index_14.png'></image>
+                    <image wx:else class='coop' src='../../mock/images/common/index_03.png'></image>
+              </block>
+              <block wx:else>
+              <image class='onlinebuy' src='../../mock/images/common/index_59.png'></image>
+                    <image wx:if="{{true}}" class='personal' src='../../mock/images/common/index_44.png'></image>
+                     <image wx:else class='personal' src='../../mock/images/common/index_34.png'></image>
+
+                    <image wx:if="{{item.realNameIdentity}}" class='realname' src='../../mock/images/common/index_45.png'></image>
+                    <image wx:else class='realname' src='../../mock/images/common/index_36.png'></image>
+                    
+                    <image wx:if="{{item.cofcoIdentity}}"  class='vip' src='../../mock/images/common/hh_30.png'></image>
+                    <image wx:else class='vip' src='../../mock/images/common/index_01.png'></image>
+
+                    <image wx:if="{{item.ismember}}"  class='merchant' src='../../mock/images/common/hh_31.png'></image>
+                    <image wx:else class='merchant' src='../../mock/images/common/index_02.png'></image>
+
+                    <image wx:if="{{item.serviceAuthority}}"  class='coop' src='../../mock/images/common/hh_32.png'></image>
+                    <image wx:else class='coop' src='../../mock/images/common/index_03.png'></image>
+              </block>
+              </view>
+              <view class='mcbright'>
+              <image class='time' src='../../mock/images/common/index_48.png'></image><text class='mestext'>{{item.create_time}}</text>
+              </view>
+            </view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>  
+    
+    
+    <swiper-item>  
+        <scroll-view scroll-y='true' style="height: 562rpx;">
+            <block wx:for="{{history}}" wx:key="{{index}}" >
+                    <view class="{{item.type==1?'message-buy':'message-sell'}}" bindtap="{{item.type==1?'toBuy':'tosellers'}}" data-fb="{{item.fb_id}}">
+                <view class='mesheader'>
+                  <view class='sbkind'>
+                  <block wx:if="{{item.type==1}}">
+                  <image src='../../mock/images/common/index_19.png' class='iconsellbuy'></image>
+                  </block>
+                  <block wx:else>
+                  <image src='../../mock/images/common/index_29.png' class='iconsellbuy'></image>
+                  </block>
+
+                  <view class='meskind'>{{item.category}}</view>
+                  </view>
+                  <view class='sbprice'>
+                  <block wx:if="{{item.type==1}}">
+                  <image src='../../mock/images/common/index_22.png' class='icon-bprice'></image>
+                  </block>
+                  <block wx:else>
+                  <image src='../../mock/images/common/index_30.png' class='icon-bprice'></image>
+                  </block>
+                  <view class="{{item.type==1?'mes-bprice':'mes-sprice'}}">{{item.price}}元/{{item.unit}}</view> 
+                  </view>
+                </view>
+                <view class='mescontent'>
+                  <view class='mctop'>
+                    <view class='brand'><text class='mes' decode='true'>品&emsp;牌：</text><text class='mestext'>{{item.brand}}</text></view>
+                    <view class='quantity'><text class='mes' decode='true'>数量：</text><text class='mestext'>{{item.amount}}{{item.unit}}</text></view>
+                  </view>
+                  <view class='mcmid'>
+                    <view class='del-place'><text class='mes' decode='true'>交货地：</text><text class='mestext'>{{item.place}}</text></view>
+                    <view class='norms'><text class='mes' decode='true'>规格：</text><text class='mestext'>{{item.standard}}</text></view>
+                  </view>
+                  <view class='mcbottom'>
+              <view class='mcbleft'> 
+              <block wx:if="{{item.type==1}}">
+              <image class='onlinebuy' src='../../mock/images/common/index_78.png'></image>
+                    <image wx:if="{{true}}" class='personal' src='../../mock/images/common/index_13.png'></image>
+                     <image wx:else class='personal' src='../../mock/images/common/index_34.png'></image>
+
+                    <image wx:if="{{item.realNameIdentity}}" class='realname' src='../../mock/images/common/index_12.png'></image>
+                    <image wx:else class='realname' src='../../mock/images/common/index_36.png'></image>
+                    
+                    <image wx:if="{{item.cofcoIdentity}}"  class='vip' src='../../mock/images/common/index_20.png'></image>
+                    <image wx:else class='vip' src='../../mock/images/common/index_01.png'></image>
+
+                    <image wx:if="{{item.ismember}}"  class='merchant' src='../../mock/images/common/index_21.png'></image>
+                    <image wx:else class='merchant' src='../../mock/images/common/index_02.png'></image>
+
+                    <image wx:if="{{item.serviceAuthority}}"  class='coop' src='../../mock/images/common/index_14.png'></image>
+                    <image wx:else class='coop' src='../../mock/images/common/index_03.png'></image>
+              </block>
+              <block wx:else>
+              <image class='onlinebuy' src='../../mock/images/common/index_59.png'></image>
+                    <image wx:if="{{true}}" class='personal' src='../../mock/images/common/index_44.png'></image>
+                     <image wx:else class='personal' src='../../mock/images/common/index_34.png'></image>
+
+                    <image wx:if="{{item.realNameIdentity}}" class='realname' src='../../mock/images/common/index_45.png'></image>
+                    <image wx:else class='realname' src='../../mock/images/common/index_36.png'></image>
+                    
+                    <image wx:if="{{item.cofcoIdentity}}"  class='vip' src='../../mock/images/common/hh_30.png'></image>
+                    <image wx:else class='vip' src='../../mock/images/common/index_01.png'></image>
+
+                    <image wx:if="{{item.ismember}}"  class='merchant' src='../../mock/images/common/hh_31.png'></image>
+                    <image wx:else class='merchant' src='../../mock/images/common/index_02.png'></image>
+
+                    <image wx:if="{{item.serviceAuthority}}"  class='coop' src='../../mock/images/common/hh_32.png'></image>
+                    <image wx:else class='coop' src='../../mock/images/common/index_03.png'></image>
+              </block>
+              </view>
+              <view class='mcbright'>
+              <image class='time' src='../../mock/images/common/index_48.png'></image><text class='mestext'>{{item.create_time}}</text>
+              </view>
+            </view>
+                </view>
+              </view>
+            </block>
+        </scroll-view>  
+    </swiper-item>  
+  
+    <swiper-item>  
+      <scroll-view scroll-y='true' style="height: 562rpx;">
+      <block wx:for="{{buy}}" wx:key="{{index}}">
+           <view class='message-buy' bindtap='toBuy' data-fb="{{item.fb_id}}">
+            <view class='mesheader'>
+              <view class='sbkind'><image src='../../mock/images/common/index_19.png' class='iconsellbuy'></image><view class='meskind'>{{item.category}}</view>
+              </view>
+              <view class='sbprice'><image src='../../mock/images/common/index_22.png' class='icon-bprice'></image><view class='mes-bprice'>{{item.price}}元/{{item.unit}}</view> 
+            </view>
+            </view>
+            <view class='mescontent'>
+            <view class='mctop'>
+              <view class='brand'><text class='mes' decode='true'>品&emsp;牌：</text><text class='mestext'>{{item.brand}}</text></view>
+              <view class='quantity'><text class='mes' decode='true'>数量：</text><text class='mestext'>{{item.amount}}{{item.unit}}</text></view>
+            </view>
+            <view class='mcmid'>
+              <view class='del-place'><text class='mes' decode='true'>交货地：</text><text class='mestext'>{{item.place}}</text></view>
+              <view class='norms'><text class='mes' decode='true'>规格：</text><text class='mestext'>{{item.standard}}</text></view>
+            </view>
+            <view class='mcbottom'>
+              <view class='mcbleft'> 
+              <block wx:if="{{item.type==1}}">
+              <image class='onlinebuy' src='../../mock/images/common/index_78.png'></image>
+                    <image wx:if="{{true}}" class='personal' src='../../mock/images/common/index_13.png'></image>
+                     <image wx:else class='personal' src='../../mock/images/common/index_34.png'></image>
+
+                    <image wx:if="{{item.realNameIdentity}}" class='realname' src='../../mock/images/common/index_12.png'></image>
+                    <image wx:else class='realname' src='../../mock/images/common/index_36.png'></image>
+                    
+                    <image wx:if="{{item.cofcoIdentity}}"  class='vip' src='../../mock/images/common/index_20.png'></image>
+                    <image wx:else class='vip' src='../../mock/images/common/index_01.png'></image>
+
+                    <image wx:if="{{item.ismember}}"  class='merchant' src='../../mock/images/common/index_21.png'></image>
+                    <image wx:else class='merchant' src='../../mock/images/common/index_02.png'></image>
+
+                    <image wx:if="{{item.serviceAuthority}}"  class='coop' src='../../mock/images/common/index_14.png'></image>
+                    <image wx:else class='coop' src='../../mock/images/common/index_03.png'></image>
+              </block>
+              <block wx:else>
+              <image class='onlinebuy' src='../../mock/images/common/index_59.png'></image>
+                    <image wx:if="{{true}}" class='personal' src='../../mock/images/common/index_44.png'></image>
+                     <image wx:else class='personal' src='../../mock/images/common/index_34.png'></image>
+
+                    <image wx:if="{{item.realNameIdentity}}" class='realname' src='../../mock/images/common/index_45.png'></image>
+                    <image wx:else class='realname' src='../../mock/images/common/index_36.png'></image>
+                    
+                    <image wx:if="{{item.cofcoIdentity}}"  class='vip' src='../../mock/images/common/hh_30.png'></image>
+                    <image wx:else class='vip' src='../../mock/images/common/index_01.png'></image>
+
+                    <image wx:if="{{item.ismember}}"  class='merchant' src='../../mock/images/common/hh_31.png'></image>
+                    <image wx:else class='merchant' src='../../mock/images/common/index_02.png'></image>
+
+                    <image wx:if="{{item.serviceAuthority}}"  class='coop' src='../../mock/images/common/hh_32.png'></image>
+                    <image wx:else class='coop' src='../../mock/images/common/index_03.png'></image>
+              </block>
+              </view>
+              <view class='mcbright'>
+              <image class='time' src='../../mock/images/common/index_48.png'></image><text class='mestext'>{{item.create_time}}</text>
+              </view>
+            </view>
+            </view>
+          </view> 
+      </block>
+      </scroll-view>
+    </swiper-item>  
+   
+   
+    <swiper-item>  
+             <scroll-view scroll-y='true' style="height: 562rpx;">
+      <block wx:for="{{sell}}" wx:key="{{index}}">
+          <view class='message-sell' bindtap='tosellers' data-fb="{{item.fb_id}}">
+            <view class='mesheader'>
+              <view class='sbkind'><image src='../../mock/images/common/index_29.png' class='iconsellbuy'></image><view class='meskind'>{{item.category}}</view>
+              </view>
+              <view class='sbprice'><image src='../../mock/images/common/index_30.png' class='icon-bprice'></image><view class='mes-sprice'>{{item.price}}元/{{item.unit}}</view> 
+            </view>
+            </view>
+            <view class='mescontent'>
+            <view class='mctop'>
+              <view class='brand'><text class='mes' decode='true'>品&emsp;牌：</text><text class='mestext'>{{item.brand}}</text></view>
+              <view class='quantity'><text class='mes' decode='true'>数量：</text><text class='mestext'>{{item.amount}}{{item.unit}}</text></view>
+            </view>
+            <view class='mcmid'>
+              <view class='del-place'><text class='mes' decode='true'>交货地：</text><text class='mestext'>{{item.place}}</text></view>
+              <view class='norms'><text class='mes' decode='true'>规格：</text><text class='mestext'>{{item.standard}}</text></view>
+            </view>
+            <view class='mcbottom'>
+              <view class='mcbleft'> 
+              <block wx:if="{{item.type==1}}">
+              <image class='onlinebuy' src='../../mock/images/common/index_78.png'></image>
+                    <image wx:if="{{true}}" class='personal' src='../../mock/images/common/index_13.png'></image>
+                     <image wx:else class='personal' src='../../mock/images/common/index_34.png'></image>
+
+                    <image wx:if="{{item.realNameIdentity}}" class='realname' src='../../mock/images/common/index_12.png'></image>
+                    <image wx:else class='realname' src='../../mock/images/common/index_36.png'></image>
+                    
+                    <image wx:if="{{item.cofcoIdentity}}"  class='vip' src='../../mock/images/common/index_20.png'></image>
+                    <image wx:else class='vip' src='../../mock/images/common/index_01.png'></image>
+
+                    <image wx:if="{{item.ismember}}"  class='merchant' src='../../mock/images/common/index_21.png'></image>
+                    <image wx:else class='merchant' src='../../mock/images/common/index_02.png'></image>
+
+                    <image wx:if="{{item.serviceAuthority}}"  class='coop' src='../../mock/images/common/index_14.png'></image>
+                    <image wx:else class='coop' src='../../mock/images/common/index_03.png'></image>
+              </block>
+              <block wx:else>
+              <image class='onlinebuy' src='../../mock/images/common/index_59.png'></image>
+                    <image wx:if="{{true}}" class='personal' src='../../mock/images/common/index_44.png'></image>
+                     <image wx:else class='personal' src='../../mock/images/common/index_34.png'></image>
+
+                    <image wx:if="{{item.realNameIdentity}}" class='realname' src='../../mock/images/common/index_45.png'></image>
+                    <image wx:else class='realname' src='../../mock/images/common/index_36.png'></image>
+                    
+                    <image wx:if="{{item.cofcoIdentity}}"  class='vip' src='../../mock/images/common/hh_30.png'></image>
+                    <image wx:else class='vip' src='../../mock/images/common/index_01.png'></image>
+
+                    <image wx:if="{{item.ismember}}"  class='merchant' src='../../mock/images/common/hh_31.png'></image>
+                    <image wx:else class='merchant' src='../../mock/images/common/index_02.png'></image>
+
+                    <image wx:if="{{item.serviceAuthority}}"  class='coop' src='../../mock/images/common/hh_32.png'></image>
+                    <image wx:else class='coop' src='../../mock/images/common/index_03.png'></image>
+              </block>
+              </view>
+              <view class='mcbright'>
+              <image class='time' src='../../mock/images/common/index_48.png'></image><text class='mestext'>{{item.create_time}}</text>
+              </view>
+            </view>
+            </view>
+          </view>
+      </block>
+      </scroll-view>
+    </swiper-item>  
+  </swiper>  
+
+
+
+

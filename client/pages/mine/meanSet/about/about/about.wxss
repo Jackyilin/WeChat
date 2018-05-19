@@ -1,0 +1,18 @@
+/* pages/mine/meanSet/about/copyright/copyright.wxss */
+#copyrighr-header{
+  margin:20rpx auto; 
+  width: 90%;
+  border-bottom: .5rpx solid #ccc;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+#copyright-content{
+  font-size: 30rpx;
+  font-weight: bolder;
+  margin: 10rpx 30rpx 10rpx 30rpx;
+}
+#copyright-con{
+  font-size: 30rpx;
+  margin: 30rpx 10rpx 10rpx 30rpx;
+}

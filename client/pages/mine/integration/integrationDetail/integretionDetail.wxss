@@ -1,0 +1,53 @@
+/* pages/mine/integration/integrationDetail/integretionDetail.wxss */
+@import '../../common/common.wxss';
+ .border{
+  /* border-bottom: 1px solid #ccc */
+  margin-top: -10rpx;
+} 
+#detail{
+  padding-left: 20rpx;
+  background-color:#fff;
+  display:flex;
+  justify-content: space-between;
+  margin:-10px;
+  width: 100%;
+}
+#detail:nth-child(1){
+  margin-top: 0;
+}
+#detail-left{
+  flex-grow:1;
+  margin-top:25rpx;
+  padding-left:30rpx;
+
+}
+#detail-right{
+  flex-grow:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  text-align:right;
+  margin-top:40rpx;
+}
+#detail-ttext,#detail-btext{
+  flex-grow:1;
+  margin-top: 5rpx;
+  font-size: 30rpx;
+  padding-right: 30rpx; 
+}
+#detail-btext{
+  font-size:38rpx;
+}
+#detail-rtext{
+  flex-grow:1;
+  margin-top: 15rpx;
+  font-size: 28rpx; 
+  color: #ccc;
+}
+#detail-text{
+  font-size: 32rpx
+}
+#detail-image{
+  height: 2rpx;
+  width: 100%;
+}

@@ -1,0 +1,10 @@
+<!--pages/free/success/success.wxml-->
+<view>
+  <image src='../../../mock/images/inte/success.png'></image>
+</view>
+<view class='hint'>
+恭喜您，兑换成功
+</view>
+<view>
+  <button bindtap='toFree' class='back'>填写地址</button>
+</view>

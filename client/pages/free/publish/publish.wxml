@@ -1,0 +1,94 @@
+<!--publish.wxml-->
+<view class="container">
+  <view class="header" style="" size="30">发布信息</view>
+  <form bindsubmit="formSubmit" bindreset="">
+
+    <!-- 选择服务picker -->
+    <view class="form-item picker_1 all">
+      <label class="title">选择服务：</label>
+      <picker class="model picker" name="ser" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view>
+          {{array[index]}}
+        </view>
+      </picker>
+    </view>
+
+    <!-- 品类 picker -->
+    <view class="form-item picker_2 all">
+      <label class="title">品类：</label>
+      <picker mode="multiSelector" name="typ" class="model picker" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" custom-item="{{customItem}}">
+        <view>
+          {{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}
+        </view>
+      </picker>
+    </view>
+
+    <!-- 地区选择器 picker -->
+    <view class="form-item picker_3 all">
+      <view class="title">地区：</view>
+      <picker name="region" class="model picker" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view>
+          {{region[0]}}，{{region[1]}}，{{region[2]}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="form-item picker_4 all">
+      <view class="title">交货地：</view>
+      <picker name="place" class="model picker" mode="region" bindchange="bindRegionChange2" value="{{region2}}" custom-item="{{customItem2}}">
+        <view>
+          {{region2[0]}}，{{region2[1]}}，{{region2[2]}}
+        </view>
+      </picker>
+    </view>
+    <!-- 品牌input -->
+    <view class="form-item all">
+      <label class="title">品牌：</label>
+      <input class="model input" placeholder="商品品牌" name="brand"></input>
+    </view>
+
+    <!-- 数量input -->
+    <view class="form-item all">
+      <label class="title">数量：</label>
+      <input class="model input" placeholder="数量" name="count" type="number"></input>
+    </view>
+
+    <!-- 单位input -->
+    <view class="form-item all">
+      <label class="title">单位：</label>
+      <input class="model input" name="unit" placeholder="千克、吨等"></input>
+    </view>
+
+    <!-- 单价input -->
+    <view class="form-item all">
+      <label class="title">单价：</label>
+      <input class="model input" name="price" type="number" placeholder="只填写数字"></input>
+    </view>
+
+    <!-- 规格textarea -->
+    <view class="form-item specification all" auto-height="true">
+      <label class="title">规格：</label>
+      <input class="model input" name="spec" placeholder="详细信息"></input>
+    </view>
+
+    <!-- 添加图片 -->
+    <view class="addPic">
+      <label class="addPicTitle">添加图片</label>
+      <image mode="center" class="model uploadPic" name="img" bindtap="getImage" src="{{tempFilePath}}"></image>
+      <!-- <image mode="aspectFit" class="model uploadPic" name="img" bindtap="getImage" src="{{tempFilePath2}}"></image>
+      <image mode="aspectFit" class="model uploadPic" name="img" bindtap="getImage" src="{{tempFilePath3}}"></image>  -->
+    </view>
+
+      <!-- 全部信息  -->
+    <!-- <view class="form-item all">
+      <label class="total">信息预览</label>
+      <text class="model">{{text}}</text>
+      <button class="publish" bindtap="preview">点击预览</button>
+    </view>  -->
+
+    <!-- 发布button -->
+    <view>
+      <button class="publish" bindtap="getOpenId" formType="submit">确认发布</button>
+    </view>
+  </form>
+</view>

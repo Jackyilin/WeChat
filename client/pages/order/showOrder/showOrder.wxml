@@ -1,0 +1,69 @@
+<!--pages/order/showOrder/showOrder.wxml-->
+<view class='containe'>
+  <view class='container-head'>
+    <view class='container-head-left'>玉米订单</view>
+    <view class='container-head-right'>中粮订单</view>
+  </view>
+  <view class='container-top'>
+    <view class='container-top-tittle'>
+      <view class='container-top-tittle-left'>
+         <image src='../../../mock/images/order/index_06.png'></image> 
+      </view>
+      <view class='container-top-tittle-right'>{{region}}</view>
+      <view class='container-top-tittle-right'><text id='na'>{{data.legalmanName}}</text></view><!--姓名  -->
+    </view>
+    <view class='container-top-content'>
+      <view class='border'>        
+        <view class='container-top-cottent-left'>        
+        <view class='inner'>拥有土地：<text>{{data.landed}}亩</text></view>
+        </view>
+        <view class='container-top-cottent-right'><view class='inner'>卖出价格：<text>1000元/吨</text></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='container-mid'>
+    <view class='container-top-tittle'>
+      <view class='container-top-tittle-left'>
+         <image src='../../../mock/images/order/index_08.png'></image> 
+      </view>
+      <view class='container-top-tittle-right'>农资、农机详情</view>
+      <view class='container-top-tittle-right'></view>
+    </view>
+    <view class='container-top-content'>
+      <view class='border'>        
+      <view class='container-top-cottent-left'>
+        <view class='inner'>玉米种子：<text>{{dataNum.typeId}}</text></view>
+        <view class='inner'>物流：<text>{{dataNum.campanyName}}</text></view>
+        <view class='inner'>农药：<text>{{dataNum.pesticideName}}</text></view>
+      </view>
+      <view class='container-top-cottent-right'>
+        <view class='inner'>化肥：<text>{{dataNum.chemicalFertilizer}}</text></view>
+        <view class='inner'>农机：<text>{{dataNum.machineryName}}</text></view>
+      </view>
+      </view>
+    </view>
+  </view>
+  <view class='container-bom'>
+   <view class='container-top-tittle'>
+      <view class='container-top-tittle-left'>
+        <image src='../../../mock/images/order/index_08.png'></image> 
+      </view>
+      <view class='container-top-tittle-right'>粮食买卖情况</view>
+      <view class='container-top-tittle-right'></view>
+
+    </view>
+    <view class='container-top-content'>
+      <view class='border'>        
+      <view class='container-top-cottent-left'>
+        <view class='inner'>卖出时间：<text>2018-9-9</text></view>
+        <view class='inner'>烘干塔：<text>{{data.dryingTower}}</text></view>
+      </view>
+      <view class='container-top-cottent-right'>
+         <view class='inner'>粮库：<text>{{data.warehouse}}</text></view>
+        <view class='inner'>其他：<text>5号烘干塔</text></view>
+      </view>
+      </view>
+    </view>
+  </view>
+</view>

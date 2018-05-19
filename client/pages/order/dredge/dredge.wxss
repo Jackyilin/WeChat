@@ -1,0 +1,106 @@
+/* pages/order/dredge/dredge.wxss */
+@import '../../common/common.wxss';
+.dredge-header-bg{
+  display: block;  
+  width: 100%;
+  height: 320rpx;
+  position: relative;
+}
+.swiper-tab{
+  width: 100%;
+  display: flex;
+  position: absolute;
+  background-color: rgba(83, 45, 83, 0.395);
+  top: 228rpx;
+}
+.swiper-tab view{
+  flex: 1;
+  text-align: center;
+  margin: 20rpx 0;
+  color: #fff;
+}
+.swiper-tab view:first-child{
+  border-right: 1rpx solid #fff;
+}
+.on{
+  color: #da7c0c;  
+  border-bottom: 5rpx solid #da7c0c;
+}
+/*one开始  */
+.dredge-middle{
+  background-color: #fff;
+}
+.name,.phone,.choice,.address,.verification{
+  display: flex;
+  padding: 20rpx;
+  border-top: 1rpx solid #ccc;
+}
+.name input,.phone input,.address input,.verification input{
+  flex: 7;
+  border: 0;
+}
+.choice .region{/*选择地区*/
+  flex: 7;
+}
+.region address{
+  text-align: left;
+}
+.name{
+  padding-top: 40rpx; 
+}
+.img{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img image{
+  width: 60rpx;
+  height: 60rpx;
+}
+/*two开始  */
+.tel{
+  display: flex;
+  padding: 40rpx 20rpx 20rpx 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  align-items: center;
+}
+.tel .telephone{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tel input{
+  flex: 5;
+  border-right: 2rpx solid #949494;
+}
+.placeholder{
+  font-weight: 600;
+  color: #9B9B9B;
+}
+.tel .hint{
+  flex: 2;
+  padding-left: 20rpx;
+  color: #7FC7A1;
+  text-align: center;
+}
+.btn{
+  width: 90%;
+  background-color: #7FC7A1;
+  color: #fff;
+  white-space: pre;
+}
+.footer{
+  padding: 0 5%;
+  font-size: 30rpx;
+}
+.footer .left{
+  color: #9B9B9B;
+  font-weight: 600;
+}
+.footer .right{
+  color: #7FC7A1;
+  font-weight: 600;
+  margin-left: 20rpx; 
+}

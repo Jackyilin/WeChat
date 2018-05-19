@@ -1,0 +1,91 @@
+<!--pages/mine/recIntent/recIntent.wxml-->
+<import src='../common/empty.wxml' />
+
+<view id='recIntent'>
+   <block wx:if='{{intentions.length==0}}'>
+    <template is='empty' data="{{text:'您还未收到意向'}}" />
+  </block> 
+   <block wx:else> 
+    <view wx:for='{{intentions}}' wx:key='{{index}}'>
+      <view class='intention'>
+        <view class='intention-sponsor'>
+          <view class='i-s-up'>
+            <view class='i-s-left'>
+              <image src='../../../mock/images/rich/avatar.jpg' class='portrait'></image>
+            </view>
+            <view class='i-s-center'>
+              <view class='i-s-name'>{{item.username}}</view>
+              <view class='i-s-business'>{{item.business}}</view>
+            </view>
+            <view class='i-s-right'>
+              <navigator url="../home/home?openid={{item.openid}}" hover-class='none'>
+                <button size='mini' type='default'>查看详细</button>
+              </navigator>
+            </view>
+          </view>
+          <view class='i-s-down'>
+            <view class='image-wrapper'>
+              <image src='../../../mock/images/mine/bjge.jpg' class='mark'></image>
+              <view>个人</view>
+            </view>
+            <view class='image-wrapper'>
+              <image src='../../../mock/images/mine/bjshi.jpg' class='mark'></image>
+              <view>实名认证</view>
+            </view>
+            <view class='image-wrapper'>
+              <image src='../../../mock/images/mine/bjv.jpg' class='member'></image>
+              <view>无央会员</view>
+            </view>
+             <button size='mini' type='default' bindtap='call' data-tel="{{item.tel}}"></button> 
+          </view>
+        </view>
+        
+    </view>
+    <view class='intention-goods'>
+          <view class='notice'>关注了您的</view>
+          <view class="{{item.type==1?'goods-in':'goods-out'}}">
+          <view class='i-g-title'>
+            <view class='i-g-left image-wrapper'>
+            <block wx:if='{{item.type==1}}'>
+              <image src='../../../mock/images/icon/index_19.png' class='buy'></image>
+            </block>
+            <block wx:if='{{item.type==2}}'>
+              <image src='../../../mock/images/icon/index_29.png' class='buy'></image>
+            </block>
+              <view class='i-g-name'>{{item.category}}</view>
+            </view>
+            <view class='i-g-right'>
+              <view class='i-g-price'>￥{{item.price}}元/吨</view>
+            </view>
+          </view>
+          <view class='i-g-detail'>
+            <view class='i-g-left'>
+              <view>品牌：{{item.brand}}</view>
+              <view>交货地：{{item.region}}{{item.place}}</view>
+              <view class='i-g-marks'>
+              <block wx:if='{{item.type==1}}'>
+                <image src='../../../mock/images/mine/index_78.png' class='online'></image>
+                <image src='../../../mock/images/mine/index_40.png' class='mark'></image>
+                <image src='../../../mock/images/mine/index_41.png' class='mark'></image>
+                </block>
+              <block wx:if='{{item.type==2}}'>
+                <image src='../../../mock/images/mine/index_59.png' class='online'></image>
+                <image src='../../../mock/images/mine/index_44.png' class='mark'></image>
+                <image src='../../../mock/images/mine/index_45.png' class='mark'></image>
+              </block>
+              </view>         
+            </view>
+            <view class='i-g-right'>
+              <view>数量：{{item.amount}}{{item.unit}}</view>
+              <view>规格：{{item.standard}}</view>
+              <view class='image-wrapper time'>
+                <image src='../../../mock/images/mine/index_48.png'></image>
+                <view>{{item.create_time}}</view>
+              </view>           
+            </view>         
+          </view> 
+          </view>       
+        </view>
+      </view>
+  </block> 
+</view>

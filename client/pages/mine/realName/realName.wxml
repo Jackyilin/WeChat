@@ -1,0 +1,46 @@
+<view class='msgName'>
+  <view class='title'>姓名</view>
+  <input placeholder='**文(请输入完整姓名)'></input>
+</view>
+<view class='msgId'>
+  <view class='title'>身份证号码</view>
+  <input placeholder='请输入证件号'></input>
+</view>
+
+<view class='titleImg'>上传证件照片</view>
+<view class='bBox'>
+<view class='imgBox'>
+  <view  class='uploadImg'><image src="{{tempFilePaths0 }}" mode="aspecFill" style="width: 100%; height: 100%"/></view>
+  <view bindtap="chooseimage0" class='shot'>拍摄正面</view> 
+</view>
+<view class='imgBox'>
+  <view  class='uploadImg'><image src="{{tempFilePaths1 }}" mode="aspecFill" style="width: 100%; height: 100%"/></view>
+  <view bindtap="chooseimage1" class='shot'>拍摄反面</view> 
+</view>
+</view>
+
+<view class='shotReq'>
+<view class='reqTitle'>拍摄身份证要求</view>
+<view class='reqBox'>
+<text class='reqContent'>大陆公民持有的本人有效二代身份证;\n拍摄时确保身份证<text style='color:red'>边框完整，字体清晰，亮度均匀</text></text>
+</view>
+
+<view class='reqImg'>
+<view class='reqBoxlit'><image src='../../../mock/images/mine/req_01.png'></image>
+<view>标准</view></view>
+
+<view class='reqBoxlit'><image src='../../../mock/images/mine/req_02.png'></image>
+<view>边框缺失</view></view>
+<view class='reqBoxlit'><image src='../../../mock/images/mine/req_03.png'></image>
+<view>照片模糊</view></view>
+</view>
+
+<view class='setMsg'>
+  <view bindtap='showGit' class='setText'>提交</view>
+</view>
+</view>
+
+
+
+
+

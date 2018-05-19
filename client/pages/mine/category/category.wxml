@@ -1,0 +1,12 @@
+<!--pages/mine/category/category.wxml-->
+<view id='category'>
+  <view>
+    <view class='wrapper' wx:for='{{category}}' wx:key='{{index}}'>
+      <navigator url='cateSub/cateSub?category_id={{item.category_id}}&category_name={{item.category_name}}' class='box'>
+        <image src='../../../mock/images/mine/category_{{item.category_id}}.png' class='cate-img'></image>
+        <text>\n</text>
+        <view class='cate-text'>{{item.category_name}}</view>
+      </navigator>
+    </view>
+  </view>
+</view>

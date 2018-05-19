@@ -1,0 +1,10 @@
+<!--pages/mine/category/cateSub/cateSub.wxml-->
+<view>
+  <!-- <view class='cateSub' wx:for='{{sub}}' wx:key='{{index}}'> -->
+    <!-- <view class='sub-title'>{{item.subName}}</view> -->
+    <view class='sub-cont'>
+      <view wx:for='{{sub}}' wx:key='{{index}}' class="sub-sub {{selectStu[index]?'selected':''}}" bindtap='click' data-index="{{index}}" >{{item.category_name}}</view>
+    </view>
+  <!-- </view> -->
+  <button type='primary' class='add' bindtap='add'>加入品类</button>
+</view>

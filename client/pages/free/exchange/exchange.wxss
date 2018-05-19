@@ -1,0 +1,99 @@
+/* pages/free/exchange/exchange.wxss */
+page{
+  background-color: #ccc;
+}
+.header{
+  position: relative;
+  height: 200rpx;
+  display: flex;
+  background-color: white;
+  margin-bottom: 30rpx;
+}
+.header-left,.header-right{
+  flex: 1;
+  margin-left: 65rpx;
+}
+.header-left{
+  display: flex;
+}
+.person,.content-right{
+  flex: 1
+}
+.person{
+  height: 150rpx;
+  width: 150rpx;
+  margin-top: 30rpx;
+}
+.content-right{
+  margin-top: 50rpx;
+  margin-left: 5rpx;
+}
+.header-right{
+  display: flex;
+  flex-direction: column;
+}
+.mine,.total-integral{
+  flex: 1;
+}
+.total-integral{
+  display: flex;
+}
+.money,.amount{
+  justify-content: space-between;
+}
+.money{
+  height: 40rpx;
+  width: 40rpx;
+  margin: 0 20rpx 0 85rpx;
+}
+.mine{
+  margin-top: 50rpx;
+  text-align: center;
+  font-size: 32rpx;  
+}
+.gift image{
+  width: 200rpx;
+  height: 200rpx;
+}
+navigator{
+  width: 150rpx;
+  height: 80rpx;
+  background-color: #7fc7a1;
+  color: white;
+  text-align: center;
+  line-height: 80rpx;
+}
+.introduce{
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  background-color: white;
+  align-items: center;
+}
+.gift,.button{
+  flex:1;
+}
+.content{
+  flex:2;
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+}
+.gift{
+  margin-left:30rpx;
+}
+.count{
+  color: red;
+}
+.information{
+  font-size: 24rpx;
+  color: #888;
+}
+.exchange{
+  background-color: #7fc7a1;
+  color: white;
+  width: 180rpx;
+  height: 100rpx;
+  margin-right: 50rpx;
+}
+
+
+

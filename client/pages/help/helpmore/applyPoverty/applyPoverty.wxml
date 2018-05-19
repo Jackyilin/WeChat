@@ -1,0 +1,29 @@
+<!--pages/help/helpmore/applyPoverty/applyPoverty.wxml-->
+<view class='container1'>
+  <view class='form-item app-add'>
+    <label class='form-label'>地区</label>
+    <view class='address'>
+      <address id="address" bindmyevent='OnMyEvent'></address>
+    </view>
+  </view>
+  <view class='form-item'>
+    <label class='form-label'>姓名</label>
+    <input class='form-input '  value='{{addData}}' type='text'></input>
+  </view>
+  <view class='form-item'>
+    <label class='form-label'>电话</label>
+    <input bindinput='telInput' class='form-input ' placeholder='手机或固话'  
+           type='number' maxlength='11'></input>
+  </view>
+  <view class='form-item'>
+    <label class='form-label moreaddress'>详细地址</label>
+    <input bindinput='ressInput' placeholder='街道门牌信息'   class='form-input' maxlength='-1'></input>
+  </view>
+  <view class='form-item app-dem'>
+    <label class='form-label'>扶贫需求</label>
+       <input bindinput='ressInput' placeholder='扶贫需求'   class='form-input' maxlength='-1'></input>
+  </view>
+  <view class='sub'>
+    <button hover-class='none' type="primary" bindtap='submit'>提交</button>
+  </view>
+</view>

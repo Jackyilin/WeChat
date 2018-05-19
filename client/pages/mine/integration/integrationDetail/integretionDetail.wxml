@@ -1,0 +1,22 @@
+<!--pages/mine/integration/integrationDetail/integretionDetail.wxml-->
+<!-- <text>pages/mine/integration/integrationDetail/integretionDetail.wxml</text> -->
+<import src='../../common/empty.wxml' /> 
+
+<block wx:if="{{detail.length>0}}" >
+<view  wx:for="{{detail}}" class="border">
+<view id='detail'>
+  <view id='detail-left'>
+    <view id='detail-ttext'>{{item.described}}</view>
+    <view id='detail-rtext'>{{item.create_time}}</view>  
+    <!-- <view id='detail-rtext'>余额：{{item.points}}</view> -->
+  </view>
+  <view id='detail-right'>
+    <view id='detail-btext'>{{item.points}}</view>
+  </view>
+</view>
+    <image id='detail-image'></image>    
+</view>
+</block>
+<block wx:else>
+ <template is='empty' data="{{text:'您的数据是空哒~'}}" />
+</block> 

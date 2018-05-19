@@ -1,0 +1,292 @@
+/* .flex-wrap{
+  display: -webkit-flex;
+  height: 100rpx;
+  border-bottom: 1rpx solid #bbb
+}
+
+.title{
+  display: -webkit-flex;
+  flex: 1;
+  font-size: 40rpx;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* page{
+  background-color: #61a5d6
+} */
+
+/* <!-- 个人消息/信息 --> start*/
+
+page {
+  font-size: 28rpx;
+  background-color: #fff;
+}
+
+.person {
+  margin: 20rpx 50rpx 0 50rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+
+.person-avatar {
+  margin: 0 20rpx 0 10rpx;
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.person-info {
+  display: inline-block;
+  /* margin-left: 10rpx; *//* border-left: 2rpx solid #e0e0e0; */
+  padding-left: 16rpx;
+  /* vertical-align: top;   */
+}
+
+.person-name {
+  padding-bottom: 10rpx;
+  font-size: 36rpx;
+}
+
+.type {
+  margin-left: 16rpx;
+  font-size: 28rpx;
+  color: #ccc;
+}
+
+.person-server {
+  margin: 24rpx 0 10rpx 0;
+  display: flex;
+  align-content: space-between;
+}
+
+/* 去除浮动 */
+
+/* .person-server::after{
+  content: '';
+  clear: both;
+  display: block;
+  width: 0;
+  overflow: hidden;
+} */
+
+.p-server-item {
+  font-size: 24rpx;
+  margin-right: 16rpx;
+  align-items: center;
+}
+
+.p-server-icon {
+  width: 44rpx;
+  height: 44rpx;
+  vertical-align: top;
+  margin-right: 10rpx;
+}
+
+/* <!-- 个人消息/信息 --> end*/
+
+/* 服务列表 start*/
+
+.server-list {
+  margin: 0rpx 50rpx;
+  width: 650rpx;
+  white-space: nowrap;
+}
+
+.server-item {
+  display: inline-block;
+  width: 130rpx;
+  height: 170rpx;
+  margin: 20rpx 14rpx;
+  padding: 5rpx;
+  /* background-color: #ccc; */
+}
+
+.server-list view:first-child {
+  margin-left: 0;
+}
+
+.server-list view:last-child {
+  margin-right: 0;
+}
+
+.server-icon-wrap {
+  width: 140rpx;
+  height: 140rpx;
+  box-sizing: border-box;
+}
+
+.server-icon {
+  padding: 15rpx;
+  width: 110rpx;
+  height: 110rpx;
+  /* border: 2rpx solid #ccc; */
+  border-radius: 50%;
+}
+
+.server-name {
+  width: 140rpx;
+  height: 40rpx;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+/* 服务列表 end*/
+
+/* // 提出需求 start*/
+
+.suggestion {
+  margin: 0 50rpx;
+}
+
+.suggestion-title {
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #1aad19;
+}
+
+.suggestion-content {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  width: 92%;
+  height: 230rpx;
+  border-radius: 8rpx;
+  border: 1rpx solid #ccc;
+  padding: 4%;
+  background-color: #f8f8f8;
+}
+
+/* 模拟textarea */
+
+.mock-textarea {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  width: 92%;
+  height: 230rpx;
+  border-radius: 8rpx;
+  border: 1rpx solid #ccc;
+  padding: 4%;
+  background-color: #f8f8f8;
+}
+
+/*.rich-rule, */
+
+.rich-submit {
+  width: 100%;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #7fc7a1;
+  color: #fff;
+}
+
+/* 提交按钮 */
+
+/* .rich-submit{
+  float: right;
+  width: 300rpx;
+
+} */
+
+.rich-rule {
+  margin: 0 50rpx;
+  color: #999;
+  font-size: 26rpx;
+  float: right;
+}
+
+.font-color {
+  color: #7fc7a1;
+}
+
+/* // 提出需求 end*/
+
+/* 弹出框的样式  start*/
+
+.a {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.rule-content {
+  width: 560rpx;
+  /* height: 800rpx; */
+  margin-top: 10rpx;
+  font-size: 0;
+  z-index: 100;
+}
+
+.rule-image {
+  width: 100%;
+  height: 280rpx;
+}
+
+.rule-policy {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* margin-top: -10rpx; */
+  padding: 30rpx 0;
+  height: 400rpx;
+  background-color: #fff;
+}
+
+.policy-item {
+  position: relative;
+  margin: 0 50rpx;
+  padding: 0 0 20rpx 32rpx;
+  /* line-height: 60rpx; */
+  font-size: 30rpx;
+  color: #666;
+  border-left: 1rpx solid #7fc7a1;
+}
+
+.policy-item-index {
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  left: -16rpx;
+  top: 8rpx;
+  line-height: 32rpx;
+  text-align: center;
+  font-size: 28rpx;
+  background-color: #7fc7a1;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.close {
+  /* width: 240rpx; */
+  background-color: #fff;
+  border-top: 1rpx solid #ccc;
+  font-size: 40rpx;
+  text-align: center;
+  color: #7fc7a1;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 0 0 5px 5px;
+}
+
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* 弹出框的样式  end*/

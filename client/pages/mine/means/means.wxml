@@ -1,0 +1,37 @@
+<view class='header'>
+  <view class='header-box'>
+    <image class='mImg' src='{{myPortrait}}' bindtap='goPhoto'></image>
+  </view>
+</view>
+
+<view class='mFun'>
+  <navigator url='personal/personal' class='box'> 
+    <view>个人信息</view>
+    <view class='light'>设置个人信息</view>
+  </navigator>
+  <navigator url='status/status' class='box'>
+    <view>我的身份</view>
+    <view class='light'>点击选择身份</view>
+  </navigator>
+  <navigator url='../category/category' class='box'>
+    <view>经营范围</view>
+    <view class='light'>点击填写经营范围</view>
+  </navigator>
+  <navigator url='strength/strength' class='box'>
+    <view>客户实力</view>
+    <view class='light'>上传实力照片</view>
+  </navigator>
+  <navigator class='box' bindtap='goWuyang'>
+    <text decode='true'>会 &nbsp;&nbsp;&nbsp; 员</text>
+    <view class='light'>非无央会员</view>
+  </navigator>
+  <navigator class='box' bindtap='goWuyang'>
+    <view>贸易商权限</view>
+    <view class='light'>未开通贸易商权限</view>
+  </navigator>
+</view>
+<navigator url='../setMeans/setMeans'>
+  <view class='setMsg'>
+    <view class='setText'>设置详细信息</view>
+  </view>
+</navigator>

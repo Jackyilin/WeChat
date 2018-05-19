@@ -1,0 +1,33 @@
+<view class='containe'>
+<view class='banner'>
+<!-- <view class='order'>订单完成</view> -->
+<image class='header' src='../../../mock/images/icon/green.png'>
+<view class='award'>
+
+
+<!-- <image class='cut' src='../../../mock/images/cut.png'></image> -->
+
+<view class='check-detail'>
+<navigator url='../../mine/integration/integrationDetail/integretionDetail' hover-class='none'>
+<image class='detail' src='../../../mock/images/icon/detail.png'></image>查看明细 </navigator>
+</view>
+</view>
+<view class='all'>总积分：{{total}}</view>
+</image>
+</view>
+
+
+<view class='rule'>
+<view class='title'>积分规则：</view>
+<view class='rule-detail'>
+<view class='brief'> 1、如何获取积分：</view>
+<view class='content'>在线支付订单完成后将获得每次订单等额的积分（即1元=1点积分）,积分将在商家确认订单后增加。</view>
+<view class='brief'>2、积分累计说明</view>
+<view class='content'>每位用户每天最多可以获得2000积分。积分不可以转移账户，积分永久有效。</view>
+<view class='brief'>3、积分可以做什么：</view>
+<view class='content'>积分可以用来兑换礼品或者进行抽奖</view>
+<view class='brief'>4、礼品兑换很多天后还没收到怎么办:</view>
+<view class='content'> 礼品从兑换日起，3个工作日（周末不算）内处理发货，发货后，通常会在三日内到达。</view>
+</view>
+</view>
+</view>

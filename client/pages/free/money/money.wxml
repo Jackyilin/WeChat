@@ -1,0 +1,40 @@
+<!--pages/free/money/money.wxml-->
+<view class='container'>
+  <view class='price-type'>
+    <button class='one'>单次抽奖</button>
+    <button class='continue'>连续抽奖</button>
+  </view>
+  <view class="container-out">
+    <view class="circle" wx:for="{{circleList}}" 
+    style="top:{{item.topCircle}}rpx;left:{{item.leftCircle}}rpx;   background-color: {{(index%2==0)?colorCircleFirst:colorCircleSecond}};"></view>
+  <view class="container-in">
+    <view class="content-out" wx:for="{{awardList}}" style="top:{{item.topAward}}rpx;left:{{item.leftAward}}rpx;background-color: {{(index==indexSelect)?colorAwardSelect:colorAwardDefault}};">
+      <image class="award-image" src="{{item.imageAward}}"></image>
+    </view>
+    <view class="start-btn" bindtap="startGame" style=" background-color:{{isRunning?'#e7930a':'#ffe400'}}">START</view>
+  </view>
+</view>
+
+<view class='prize-box'>
+<view class='mine'>我的奖品</view>
+  <view class='prize-content'>
+  <view>奖项</view>
+  <view>获取时间</view>
+  <view>领取状态</view>
+  </view>
+
+  <view class='prize-details' wx:for='{{array}}'>
+    <view>{{item.prize}}</view>
+    <view>{{item.time}}</view>
+    <view>{{item.state}}</view>
+  </view>
+  
+</view>
+
+
+<navigator url='../address/address' hover-class='none'>
+<button class='receive'>领取奖品</button>
+</navigator>
+</view>
+
+

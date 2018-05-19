@@ -1,0 +1,135 @@
+/* pages/mine/recIntent/recIntent.wxss */
+@import '../common/common.wxss';
+page{
+  background-color: #f6f6f6;
+}
+view{
+  font-size: 28rpx;
+}
+.intention{
+  background: #7fc7a1;
+  color: #fff;
+  margin-top: 20rpx;
+  padding: 30rpx 40rpx;
+  border-top: 2rpx solid #ccc;
+  border-bottom: 2rpx solid #ccc; 
+}
+.myButton{
+  background-color: #1195db;
+  color: #fff;
+}
+/*image*/
+image{
+  margin: 4rpx;
+  vertical-align: middle;
+}
+.portrait{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+.mark{
+  width: 36rpx;
+  height: 36rpx;
+}
+.member{
+  width: 34rpx;
+  height: 34rpx;
+}
+.online{
+  width: 180rpx;
+  height: 50rpx;
+}
+.buy{
+  width: 52rpx;
+  height: 52rpx;
+}
+.time image{
+  width: 36rpx;
+  height: 32rpx;
+}
+.image-wrapper image{
+  vertical-align: middle;
+}
+.image-wrapper view{
+  display: inline-block;
+}
+.i-g-marks image{
+ vertical-align: middle;
+}
+/*intention-sponsor start*/
+.i-s-up,.i-s-down{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.i-s-left{
+  flex-grow: 1;
+}
+.i-s-center{
+  flex-grow: 1;
+}
+.i-s-right{
+  flex-grow: 1;
+  border-left: 2rpx solid #ccc;
+}
+.i-s-right button{
+  margin-left: 30rpx;
+  background: #fff;
+  color: #7fc7a1;
+}
+.i-s-name{
+  font-size: 46rpx;
+}
+/*intention-sponsor end*/
+/*intention-goods start*/
+.goods-in,.goods-out{
+  margin: 20rpx 0;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  background-color: #f6f6f6;
+}
+.i-g-title,.i-g-detail{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.i-g-title{
+  border-bottom: 2rpx solid #ccc;
+  margin-bottom: 20rpx;
+}
+.i-g-left{
+  flex-basis: 2;
+}
+.i-g-right{
+  flex-basis: 1;
+  text-align:right;
+}
+.i-g-name{
+  display: inline;
+}
+.goods-in .i-g-price{
+  color: #87c38f;
+}
+.goods-out .i-g-price{
+  color: #1195db;
+}
+.notice{
+  background: #eee;
+  font-size: 24rpx;
+  padding: 0;
+  color: #ccc;
+  border-top: 2rpx solid #ccc;
+  border-bottom: 2rpx solid #ccc;  
+}
+.time view{
+  color: #ccc;
+}
+/*intention-item end*/
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}

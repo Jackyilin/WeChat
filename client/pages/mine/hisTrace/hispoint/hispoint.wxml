@@ -1,0 +1,22 @@
+<view class="section">
+    <view class="itemView">
+    <label class='contact'>成交人openid：</label>
+    <input class="input" name="userName" placeholder="一串英文字母"
+    bindinput ="hisOpenid" type='text'/>
+    </view>
+    
+    <view class="itemView">
+    <label class='contact'>数量：</label>
+    <input class="input" name="userName" placeholder="例如300吨"
+    bindinput ="shuliang" type='text'/>
+    </view>
+    
+    <view class="itemView">
+    <label class='contact'>成交总额：</label>
+    <input class="input" name="userName" placeholder="2000元"
+    bindinput ="zonge" type='text'/>
+    </view>
+    
+
+    </view>
+    <button class="submit" bindtap="queren">确认提交</button>

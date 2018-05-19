@@ -1,0 +1,16 @@
+<view class='box'>
+<!-- 照片接口 -->
+  <view class='upload'>
+    <view class='explain'>点击上传实力照片</view>
+    <view wx:for="{{my_photo}}" wx:key="{{index}}" class='imgs-box'>
+      <image src='{{item}}' bindtap="update" bindlongpress="del" data-index="{{index}}"></image>
+    </view>
+    <image bindtap="upload" wx:if="{{!full}}" src='../../../../mock/images/mine/uploadPhoto.png'></image>
+  </view>
+  <view class='show'>
+    <view class='explain'>最多可上传四张实力照片</view>
+  </view>
+</view>
+<view class='setMsg'>
+  <view bindtap='submit' class='setText'>提交</view>
+</view> 

@@ -1,0 +1,103 @@
+<!--pages/help/helpmore/helpmore.wxml-->
+
+<view class='join' bindtap='joinin'>加入扶贫</view>
+<!-- 加入扶贫弹层 -->
+<view wx:if='{{mask}}' class='maskall'>
+  <view class='mask'>
+    <view bindtap='close' class='close'></view>
+    <view class="joinpoverty">加入扶贫</view>
+    <image src='../../../mock/images/help_img/alert.png'>
+    </image>
+    <view class='mask_container'>
+      <view class='mask-code'>
+        <view class='mask-f'>扶贫码:</view>
+        <view class='{{joincodec}}'>
+          <input value='{{code}}' type='number' bindinput='watchCode' bindfocus='focusInputc' placeholder='请输入3位的扶贫码' maxlength='3'></input>
+        </view>
+      </view>
+      <view class='mask-name'>
+        <view class='mask-s'>姓 名:</view>
+        <view class='{{joincoden}}'>
+          <input value='{{name}}' type='text' bindinput='watchName' bindfocus='focusInputn' placeholder='请输入姓名'></input>
+        </view>
+      </view>
+      <view class='verify'>
+        <view bindtap='verifySuccess'>验 证</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="container helpmore">
+  <view class='content'>
+    <view class='content-btn'>
+      <image src='../../../mock/images/help_img/book.png'></image>
+      <text>扶贫政策白皮书</text>
+      <text class='btn-return' bindtap='backhelp'>返回扶贫</text>
+    </view>
+    <view class='book_content'>
+      <view class="poverty-writeBook-details choice" wx:for="{{helpdata}}">
+        <view class="point"></view>{{item.policyDetail}}
+      </view>
+      <view class='content-more' bindtap='showMore'>
+        查看更多
+        <image src='../../../mock/images/help_img/more.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='program'>
+    <view class='program-btn'>
+      <text class='{{active}}' bindtap='closeok'>已解决</text>
+      <text bindtap='closeno' class='{{none}}'>未解决</text>
+    </view>
+    <view class="section__title">
+      <picker mode="date" value="{{date}}" start="1990-09-01" end="2050-09-01" bindchange="bindDateChange">
+        <view class="picker">
+          <view class='picktime'>
+            <image src='../../../mock/images/help_img/date.png'></image>
+            <button hover-class='none' size="mini">选择时间</button>
+          </view>
+          <view class='now'>当前日期</view>
+        </view>
+        <view class='showTime'>{{date}}</view>
+      </picker>
+    </view>
+
+    <view class='program-list' wx:if='{{bol}}'>
+      <view class='program-ok1' wx:for="{{data}}" wx:if="{{item.status == 0 && item.assistTime == date}}">
+        <view class='program-con1'>
+          <view>
+            <text>被帮扶人姓名：</text>{{item.poorName}}</view>
+          <view>
+            <text>帮扶单位：</text>{{item.assistant}}</view>
+          <view>
+            <text>帮扶时间：</text>{{item.createTime}}</view>
+        </view>
+        <view class='program-more1'>
+          <button hover-class='none' class=" mini-btn" size="mini" type="primary" bindtap='presonal_poverty' data-set="{{index}}">查看详细</button>
+        </view>
+      </view>
+      <view wx:if="{{hiddenLeft}}">
+        <view class="demoimg">
+          <image src='../../../mock/images/common/null.png'></image>
+        </view>
+        <text class='demodata'>您的数据是空的 ~ ~ ~</text>
+      </view>
+    </view>
+    <view class='program-false' wx:if='{{bool}}'>
+      <view class='pro-con'>
+        <view class='program-no' wx:for="{{data}}" wx:if="{{item.status == 0 && item.createTime == date}}">
+          <view class='name'>
+            <text>申请帮扶人姓名：</text>{{item.poorName}}</view>
+          <view class='time'>
+            <text>申请时间：</text>{{item.createTime}}</view>
+        </view>
+      </view>
+      <view wx:if="{{hiddenRight}}">
+        <view class="demoimg">
+          <image src='../../../mock/images/common/null.png'></image>
+        </view>
+        <text class='demodata'>您的数据是空的 ~ ~ ~</text>
+      </view>
+    </view>
+  </view>
+</view>

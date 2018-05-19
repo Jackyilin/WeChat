@@ -1,0 +1,13 @@
+
+<view class='title'
+>请选择身份，方便我们为您提供精准服务</view>
+<view class='box'>
+  <button class='box-content' bindtap='goReturn' wx:for='{{statu}}'  wx:key="{{index}}" data-id='{{index}}'>{{item}}</button>
+</view>
+
+
+
+
+<!-- <view class='setMsg'>
+  <view bindtap='logout' class='setText'>确定</view>
+</view> -->

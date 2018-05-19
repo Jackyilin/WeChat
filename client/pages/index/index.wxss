@@ -1,0 +1,32 @@
+/**index.wxss**/
+.index {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 350rpx 0;
+  box-sizing: border-box;
+  background-image: url("http://file06.16sucai.com/2016/0709/8b0b7da3a72e0fd2a87fabd84ce26f09.jpg");
+  background-size: cover;
+} 
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  font-size: 28rpx;
+}

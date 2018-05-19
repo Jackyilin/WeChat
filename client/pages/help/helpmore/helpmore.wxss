@@ -1,0 +1,316 @@
+/* pages/help/helpmore/helpmore.wxss */
+/* @import '../../common/common.wxss'; */
+/* 扶贫政策白皮书 */
+.container{
+  padding: 20rpx;
+  display: inherit;
+  background-color: #fcfcfc;
+}
+.content-btn{
+  font-size: 32rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: left;
+  font-weight: 600;
+  background-color: #7FC7A1;
+}
+.content-btn image{
+   width: 48rpx;
+   height: 48rpx;
+   padding: 20rpx;
+   vertical-align: middle;  
+}
+.content-btn text{
+  color: #fff;
+  vertical-align: middle; 
+}
+.content-btn .btn-return{
+  color: #fff;
+  margin-left: 240rpx;
+}
+.book_content{
+  background-image: url(http://www.tstdwxq.cn/img/page.png);
+  background-size: 100% 100%;
+}
+/*条目  */
+.poverty-writeBook-details {
+  display: flex; 
+  align-items: center;
+  padding: 20rpx;
+  top: 50rpx;
+}
+.poverty-writeBook-details .point{
+  background: #7FC7A1;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.content-more {
+  display: flex;
+  justify-content: center;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.content-more image{
+  width: 20rpx;
+  height: 20rpx;
+  margin: 12rpx;
+}
+
+/* 加入扶贫 */
+
+.join {
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  background-color: #7FC7A1;
+  border: 3rpx #ccc solid;
+  border-radius: 50%;
+  text-align: center;
+  color: aliceblue;
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+  z-index: 4;
+  font-size: 28rpx;
+}
+
+/* 扶贫方案 */
+.program-btn {
+  margin-top: 20rpx;
+  background-color: #7FC7A1;
+  color: #fff;
+  display: flex;
+}
+
+.program-btn text {
+  display: inline-block;
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border: 1px solid #e9e9e9;
+}
+
+.program-btn text.active {
+  background-color: #73B995;
+}
+
+.section__title {
+  padding: 20rpx;
+}
+.section__title .now{
+  background-color: #e1e1e1;
+  border-radius: 10rpx; 
+  padding: 14rpx 50rpx;
+  font-size: 26rpx;
+  font-weight: 600;
+  margin-bottom: -10rpx;
+}
+.section__title .showTime{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(http://www.tstdwxq.cn/img/showTime.png);
+  background-size: 100% 100%;
+  border-radius: 20rpx; 
+  height: 80rpx; 
+  font-size: 40rpx;
+}
+.picker {
+  display: flex; 
+}
+
+.picktime {
+  color: #fff;
+  flex: 0.9; 
+}
+.picker button{
+  margin: -7rpx;
+  margin-left: 10rpx;
+}
+.picktime image{
+  width: 48rpx;
+  height: 48rpx;
+}
+/* 已解决 */
+.program-ok1 {
+  border-bottom:  4rpx solid #ccc; 
+  display: flex;
+  flex-direction: row;
+}
+.demoimg{
+  background-color: #fcfcfc;
+  text-align: center;
+}
+.demoimg image{
+  width: 500rpx;
+  height: 320rpx;
+}
+.program-list .demodata,.program-false .demodata{
+  background-color: #fcfcfc;
+  display: flex;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #949494;
+  font-weight: 600;
+}
+.program-con1 {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  padding: 20rpx;
+}
+.program-con1  view{
+  font-size: 28rpx;
+  color: #949494;
+}
+.program-con1 text{
+  color: #000;
+}
+.program-more1{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.program-more1 button{
+  background-color: #73B995;
+}
+.program-ok1:nth-child(2), .program-ok1:nth-child(3) {
+  border-top: 0;
+}
+
+
+/* 未解决 */
+
+.program-false {
+  background-color: #fcfcfc;
+}
+
+.pro-con {
+  background-color: #fff;
+  top: 20rpx;
+  left: 20rpx;
+  right: 20rpx;
+  bottom: 20rpx;
+}
+
+.program-no {
+  display: flex;
+  text-align: center;
+  line-height: 90rpx;
+  box-shadow: 0 4rpx 0 0 #ccc;
+  font-size: 28rpx;
+}
+
+.name,.time{
+  flex:1;
+  color: #949494;
+}
+.name text,.time text{
+  color: #000;
+}
+/* 加入扶贫 */
+.maskall{
+  background-color: rgba(124,124,124,0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+.maskall .mask {
+  position: relative;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25%;
+}
+.mask .joinpoverty{
+  font-size: 40rpx;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 230rpx;
+}
+.mask .close{
+  width: 66rpx;
+  height: 66rpx;
+  position: absolute; 
+  right: 8rpx;
+  top: 54rpx;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.mask image{
+  width: 610rpx;
+  height: 300rpx;
+  top: -40prx;
+}
+.mask_container{
+  background-color: #fff;
+  margin: -23rpx 0 0; 
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 -4rpx 5rpx #D8D8D8;
+}
+.mask-f, .mask-s {
+  width: 120rpx;
+  font-weight: 600; 
+  color: #8d8d8d;
+}
+
+.mask-code {
+  overflow: hidden; 
+  width: 420rpx;
+  margin: 90rpx auto 40rpx;
+  display: flex;
+  align-items: center;
+}
+
+.mask-name {
+  overflow: hidden;
+  width: 420rpx;
+  margin: 0 auto 40rpx;
+  display: flex;
+  align-items: center;
+}
+.mask-code input{
+  float: right;
+}
+.verify view {
+  color: #1aad19;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  border-top: 2rpx solid #F5F5F5; 
+  padding: 20rpx;
+}
+.mask-code view {
+  float: left;
+}
+.mask-name view {
+  float: left;
+}
+.join-code, .joincodeInputc, .joincodeInputn{
+  border: 4rpx rgb(231, 231, 231) solid;
+  border-radius: 14rpx; 
+  width: 292rpx;
+  height: 52rpx;
+  background-color: #e9e9e9;
+  box-shadow: -2rpx -2rpx 2rpx rgb(231, 231, 231);
+}
+.join-code{
+  color: #949494;
+  font-weight: 600;
+}
+.joincodeInputc, .joincodeInputn {
+  color: #000;
+}
+.joincodeInputc input, .joincodeInputn input{
+  padding: 40rpx;
+}

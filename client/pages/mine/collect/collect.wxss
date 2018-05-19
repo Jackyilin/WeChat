@@ -1,0 +1,119 @@
+/* pages/nabi/navi.wxss */
+@import '../common/common.wxss';
+
+.container{
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+  font-size:32rpx;
+  font-family:-apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+
+}
+.touch-item {
+    /* font-size: 14px; */
+    display: flex;  
+    justify-content: space-between;   
+    border-top:16rpx solid #b8b8b8;
+    /* width: 100%;  */
+    overflow: hidden;
+   }
+  .content {
+     width: 100%; 
+    /* padding: 10px; */
+    /* line-height: 22px; */
+    /* margin-right:0; */
+    transition: all 0.4s;
+    transform: translateX(90px);
+    margin-left: -150rpx;
+    /* display: flex;
+    align-items: center */
+   }
+   .del {
+    background-color: orangered;
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    -webkit-transform: translateX(90px);
+    transform: translateX(90px);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+   }
+   .touch-move-active .content,
+   .touch-move-active .del{
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+   }
+   /* 样式开始 */
+   .mesheader{
+    display:flex;
+    justify-content:space-between;
+    padding-top:20rpx;
+    border-bottom:1px solid #ccc;
+    padding-bottom:20rpx;
+    margin-right:35rpx;
+  }
+  .mctop,.mcmid,.mcbottom{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+   .mcbottom{
+    display: flex;
+    align-items: center;
+  } 
+  .mcbright{
+    display: flex;
+    align-items: center;
+  }
+  .mes{
+    font-size: 28rpx;
+  }
+  .mestext{
+    font-size: 28rpx;
+    color:#8c8c8c;
+  }
+  .onlinebuy{
+    width: 218rpx;
+    height: 60rpx;
+  }
+  .personal,.realname,.time{
+    width: 36rpx;
+    height: 36rpx;
+    margin: 12rpx;
+  }
+  .time{
+    float: left;
+  }
+  
+  .tab-item { 
+  width: 33.3%; 
+  text-align: center; 
+  /* font-size: 15px;  */
+  color: #777; 
+  } 
+  .iconsellbuy,
+  .icon-bprice{
+      width: 40rpx;
+      height: 40rpx;
+  }
+  .sbkind,.sbprice{
+    display: flex;
+    justify-content: center;
+  }
+  .meskind{
+    padding-left: 20rpx;
+  }
+.mes-sprice{
+  padding-left: 20rpx;
+  color: #3fc1f5;
+}
+.mes-bprice{
+  padding-left: 20rpx;
+  color: #7fc7a1;
+}
+.mestext{
+  margin-right: 30rpx;
+}

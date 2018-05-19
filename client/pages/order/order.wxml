@@ -1,0 +1,86 @@
+<!-- pages/order/order.wxml -->
+<!-- header start -->
+<view class="header">
+  <view class="header-left" bindtap="choice_cata">
+    <view class="section">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{cata}}" custom-item="{{customItem}}">
+        <view class="img">
+          <image src="../../mock/images/order/choice_cata.png"></image>
+        </view>
+        <view class="picker">{{cata[index]}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class="header-right">
+    <view class="section">
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="img">
+          <image src="../../mock/images/order/choice_region.png"></image>
+        </view>
+        <view class="picker">{{region[0]}}</view>
+      </picker>
+    </view>
+  </view>
+</view>
+<!-- header end -->
+<!-- order start -->
+ <scroll-view class='{{status!="yes"?"undredgeOrder":"dredgeOrder"}}' scroll-y="ture" wx:if="{{cata[index] == explode || cata[index] == '选择品类'}}">
+  <view class="order-message " wx:for="{{data}}">
+    <view class="order-header ">
+      <image src="../../mock/images/order/dingdan.png"></image>
+      <text class="order-left">{{explode}}订单</text>
+      <view class="order-right">中粮订单</view>
+      <!-- {{datanew.orderSource}} -->
+    </view>
+    <view class="order-footer ">
+      <view class="footer-left">
+        <view>
+          <image src="../../mock/images/order/diqu.png"></image>
+          <text>地 区 :</text>
+          <text class="meg">{{item.concludeSignPlace}}</text>
+        </view>
+        <view>
+          <image src="../../mock/images/order/pinlei.png"></image>
+          <text>数 量 :</text>
+          <text class="meg">{{item.acreage}}亩</text>
+        </view>
+        <view>
+          <image src="../../mock/images/order/chanliang.png"></image>
+          <text>单 价 :</text>
+          <text class="meg">{{item.farelock1}}元/吨</text>
+        </view>
+      </view>
+      <view class="footer-right">
+        <button class="mini-btn" size="mini" type="primary" bindtap="undredgeShowOrder" wx:if="{{status != 'yes'}}">
+          查看详细
+        </button>
+        <button class="mini-btn" size="mini" type="primary" bindtap="dredgeShowOrder" data-set="{{index+1}}" wx:if="{{status == 'yes'}}">
+          查看详细
+        </button>
+      </view>
+    </view>
+  </view>
+</scroll-view> 
+
+<!-- order end -->
+ <view class="footer-meg" hidden="{{status == 'yes'}}">
+  <view class="footer-tip">
+    <image src="../../mock/images/order/biaoqing.png"></image>
+    <text>您还未开通订单买卖</text>
+  </view>
+  <button bindtap="open" type="primary">开通订单买卖</button>
+</view> 
+<view class="mask" wx:if="{{bol}}" catch:touchmove="catch">
+  <view class="introduce">
+    <image src="../../mock/images/order/mask.png"></image>
+    <view class="int-com">
+      <view class="compare">
+        <view class="title">中粮订单和普通订单的对比:</view>
+        <view class="content">
+          预先和农户订好合同,农民再种植, 收获的产量再按合同上的价格收购，好处是农户避免了市场风险， 按合同价收购,收购者有了想要的产品,和质量。保证有货供应。
+        </view>
+      </view>
+    </view>
+    <button bindtap="close">我已经了解</button>
+  </view>
+</view>

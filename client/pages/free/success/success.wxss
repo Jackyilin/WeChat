@@ -1,0 +1,17 @@
+/* pages/free/success/success.wxss */
+image{
+  width: 100%;
+  height: 450rpx;
+}
+.hint{
+  font-size: 46rpx;
+  text-align: center;
+  margin-top: 70rpx;
+}
+.back{
+  width: 300rpx;
+  height: 100rpx;
+  background-color: #7fc7a1;
+  color: white;
+  margin-top: 50rpx;
+}

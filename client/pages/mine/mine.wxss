@@ -1,0 +1,167 @@
+/* pages/mine/mine.wxss */
+
+.m {
+  height: 100%;
+  background: #f6f6f6;
+}
+
+/* 头部蓝色 mBox */
+
+.mBox {
+  height: 300rpx;
+  background: #7fc7a1;
+  overflow: hidden;
+}
+
+.mMine {
+  height: 220rpx;
+  width: 90%;
+  background: #7fc7a1;
+  margin: 40rpx 4% 40rpx 6%;
+  position: relative;
+  overflow: hidden;
+}
+
+.mImg {
+  height: 100%;
+  width: 220rpx;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20rpx;
+}
+
+.mContent {
+  margin-left: 265rpx;
+  font-size: 30rpx;
+  color: #000;
+}
+
+/* .mContent view{
+ margin: 10rpx 0; 
+} */
+
+.bigMsg {
+  font-size: 40rpx;
+  color: white;
+}
+
+.samllMsg {
+  font-size: 32rpx;
+  color: white;
+}
+
+.inputMsg {
+  color: white;
+  background-color: #66a986;
+  /* padding-left: 20rpx; */
+  width: 395rpx;
+  border-radius: 10rpx;
+}
+
+/* .mLogo view{
+width: 40rpx;
+text-align: center;
+margin: 0 10rpx;
+float: left;
+border: 1px solid #0f0;
+color: #0f0;
+background: #fff;
+}
+.mLogo .mLogo-first{
+margin-left: 0rpx;
+} */
+
+.mLogin {
+  position: absolute;
+  right: 0;
+  top: -10rpx;
+  font-size: 22rpx;
+  color: #7fc7a1;
+  background: #f3f3f7;
+}
+
+/* 信息 mMsg */
+.openid{
+  color: #fff;
+}
+.mMsg {
+  display: flex;
+  height: 140rpx;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+
+.mMsg navigator {
+  font-size: 30rpx;
+  text-align: center;
+  color: #ccc;
+  width: 250rpx;
+  border-left: 1px solid #ccc;
+}
+
+.mMsg .mMsg-first {
+  border-left: none;
+}
+
+.mMsg image {
+  width: 64rpx;
+  height: 64rpx;
+  margin-top: 10rpx;
+}
+
+/* 功能 mFun */
+
+.mFun {
+  border-bottom: 1px solid #ddd;
+  padding: 10rpx 30rpx;
+}
+
+.mFun view {
+  width: 94%;
+  margin-left: 5%;
+  background: #fff;
+  color: #676767;
+  border-radius: 20rpx;
+  border: 1px solid #ddd;
+  margin: 20rpx auto;
+  padding-left: 30rpx;
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.mFun .mFun-middle {
+  /* border: none; */
+}
+
+.mFun .mFun-last {
+  /* border-bottom: none; */
+}
+
+.tellPhone {
+  padding-left: 315rpx;
+}
+
+/*marks start*/
+
+.mContent .marks {
+  margin: 10rpx 0;
+}
+
+.marks image {
+  width: 42rpx;
+  height: 42rpx;
+  margin: 6rpx;
+  vertical-align: middle;
+  background-color: #7fc7a1;
+}
+
+/*marks end*/
+
+/*滚动条*/
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}

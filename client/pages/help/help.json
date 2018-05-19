@@ -1,0 +1,10 @@
+{
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "黑龙江省精准扶贫",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+      "address": "../common/common"
+      }
+}

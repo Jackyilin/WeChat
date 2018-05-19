@@ -1,0 +1,43 @@
+/* pages/mine/means/means.wxss */
+@import '../common/common.wxss';
+
+
+.box{
+   margin: 0 5% 0 10%;  
+   display: flex;
+   justify-content: space-between; 
+}
+.box-btn{
+  color: #ccc;
+  font-size: 28rpx;
+}
+
+
+
+.mFun{
+  /* margin-top: 30rpx; */
+  background: #fff;
+}
+.mFun>view{
+  border-bottom: 1px solid #bbb;
+  font-size: 32rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.setMsg{
+  font-size: 32rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20rpx;    
+  width: 90%;
+  bottom: 20rpx;  
+  background: #1AAD19;
+}
+.setText{
+  text-align: center;
+  color: #fff;
+}

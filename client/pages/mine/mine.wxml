@@ -1,0 +1,91 @@
+<!--pages/mine/mine.wxml-->
+<view class='m'>
+  <view class='mBox'>
+    <view class='mMine'>
+      <block wx:if="{{buyer.headPortrait}}">
+          <image class="mImg" src="http://{{wuser.wuser[0].headPortrait}}" mode="aspectFill">
+          </image> 
+        </block>
+        <block wx:else>
+          <image class="mImg" src="{{wuser.wuser[0].wxHeadPottarat}}" mode="aspectFill">  
+          </image> 
+        </block>
+      <view class='mContent'>
+        <view class='bigMsg'>{{wuser.wuser[0].username}}</view>
+        <view class='samllMsg'>{{wuser.wuser[0].identityStatus}}</view>
+        <!-- <view class='marks'> -->
+          <!-- <image  wx:if="{{wuser.wuser[0].personalIdentity==null}}"src='../../mock/images/mine/bjge.jpg'></image>
+          <image wx:if="{{wuser.wuser[0].cofcoIdentity == null}}" src='../../mock/images/mine/index_0012.png'></image>
+          <image  wx:if="{{wuser.wuser[0].serviceIdentity==null}}"src='../../mock/images/mine/index_0011.png'></image>
+          <image  wx:if="{{wuser.wuser[0].realNameIdentity==null}}"src='../../mock/images/mine/bjshi.jpg'></image> -->
+          <!-- <image  wx:if="{{wuser.wuser[0].touristIdentity==null}}"src='../../mock/images/mine/bjhe.jpg'></image>           -->
+           
+        <!-- </view> -->
+        <view class='openid'>OPENID:</view>
+         <view class='inputMsg'>{{openid}}</view> 
+      </view>
+      <navigator url='../rich/login/login' wx:if="{{!login}}">
+        <button class='mLogin'>登 录</button>
+      </navigator>
+    </view>
+  </view>
+  <view class='mMsg'>
+    <navigator url='pubInfor/pubInfor' class='mMsg-first' bindtap='Toslip'>
+      <image src='../../mock/images/mine/mine_info.png'></image>
+      <view>发布的信息</view>
+    </navigator>
+    <navigator url='collect/collect'>
+      <image src='../../mock/images/mine/mine_collect.png'></image>
+      <view>收藏</view>
+    </navigator>
+    <navigator url='notice/notice'>
+      <image src='../../mock/images/mine/mine_fellow.png'></image>
+      <view>关注</view>
+    </navigator>
+  </view>
+
+  <view class='mFun'>
+    <navigator url='recIntent/recIntent'>
+      <view>收到的意向</view>
+    </navigator>
+    <view class='mFun-middle'>
+      <navigator url='checkHistory/checkHistory'>
+        观看历史
+      </navigator>
+    </view>
+    <navigator url='hisTrace/hisTrace'>
+      <view>历史交易</view>
+    </navigator>
+  </view>
+  <view class='mFun'>
+    <navigator url='category/category'>
+      <view>我的品类</view>
+    </navigator>
+    <navigator url="means/means">
+      <view class='mFun-middle'>我的资料</view>
+    </navigator>
+    <navigator url='home/home'>
+      <view>我的主页</view>
+    </navigator>
+    <view class='mFun-middle'>
+      <navigator url='../../../../free/integral/integral'>我的积分</navigator>
+    </view>
+    <view>
+      <navigator url='meanSet/meanSet'>我的设置</navigator>
+    </view>
+  </view>
+  <view class='mFun'>
+    <view bindtap='goWuyang'>开通贸易商</view>
+    <view class='mFun-middle'>
+      <navigator url='realName/realName'>实名认证</navigator>
+    </view>
+    <view class='mFun-last' bindtap='phoneUs'>客服电话
+      <text class='tellPhone'>400-888-3008</text>
+    </view>
+
+
+    <navigator url='priService/priService'>
+      <!-- <view class='mFun-last'>特权服务</view>   -->
+    </navigator>
+  </view>
+</view>

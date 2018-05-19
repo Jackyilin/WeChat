@@ -1,0 +1,72 @@
+<!--pages/nabi/navi.wxml-->
+<import src='../common/empty.wxml' /> 
+
+<block wx:if="{{history.length>0}}">
+<view class="containe">
+  <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart"
+    bindtouchmove="touchmove" wx:for="{{history}}" wx:key="">
+    <view class="content">
+      <!-- 开始 -->
+      <view class='mesheader'>
+        <view class='sbkind'>
+        <block wx:if="{{item.type==1}}">
+        <image src='../../../mock/images/common/index_19.png' class='iconsellbuy'></image>
+        </block>
+        <block wx:else>
+        <image src='../../../mock/images/common/index_29.png' class='iconsellbuy'></image>
+        </block>
+
+        <view class='meskind'>{{item.category}}</view>
+        </view>
+        <view class='sbprice'>
+        <block wx:if="{{item.type==1}}">
+        <image src='../../../mock/images/common/index_22.png' class='icon-bprice'></image>
+        </block>
+        <block wx:else>
+        <image src='../../../mock/images/common/index_30.png' class='iconsellbuy'></image>
+        </block>
+
+        <view class="{{item.type==1?'mes-bprice':'mes-sprice'}}">{{item.price}}元/{{item.unit}}</view>   
+        </view>
+        
+      </view>
+      <view class='mescontent'>
+        <view class='mctop'>
+          <view class='brand'><text class='mes' decode='true'>品&emsp;牌：</text><text class='mestext'>{{item.brand}}</text></view>
+          <view class='quantity'><text class='mes' decode='true'>数量：</text><text class='mestext'>{{item.amount}}{{item.unit}}</text></view>
+        </view>
+        <view class='mcmid'>
+          <view class='del-place'><text class='mes' decode='true'>交货地：</text><text class='mestext'>{{item.place}}</text></view>
+          <view class='norms'><text class='mes' decode='true'>规格：</text><text class='mestext'>{{item.standard}}</text></view>
+        </view>
+        <view class='mcbottom'>
+          <view class='mcbleft'>
+            <block wx:if="{{item.type==1}}">
+              <image class='onlinebuy' src='../../../mock/images/common/index_78.png'></image>
+              <image class='personal' src='../../../mock/images/common/index_40.png'></image>
+              <image class='realname' src='../../../mock/images/common/index_41.png'></image>
+            </block>
+            <block wx:else>
+              <image class='onlinebuy' src='../../../mock/images/common/index_59.png'></image>
+              <image class='personal' src='../../../mock/images/common/index_44.png'></image>
+              <image class='realname' src='../../../mock/images/common/index_36.png'></image>
+            </block>
+          </view>
+          <view class='mcbright'>
+            <image class='time' src='../../../mock/images/common/index_48.png'></image><text class='mestext'>{{item.create_time}}</text>
+          </view>
+        </view>
+      </view>
+      <!-- 结束 -->
+    </view>
+    <!-- <view class="confirm" catchtap="confirm" data-index="{{index}}">确认</view>  -->
+    <!-- width:95rpx; -->
+    <view class="del" catchtap="del" data-index="{{index}}">确认</view>
+  </view>
+</view>
+</block>
+<block wx:else>
+ <template is='empty' data="{{text:'您的数据是空哒~'}}" />
+</block>  
+
+

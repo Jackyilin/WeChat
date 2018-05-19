@@ -1,0 +1,93 @@
+<!-- <view class="flex-wrap">
+  <view class="title">致富光荣榜</view>
+  <view class="title">我要致富</view>
+</view> -->
+<!-- 个人消息/信息 -->
+<template name="myrich">
+  <view class="person">
+    <image class="person-avatar" src="{{realphoto}}"></image>
+    <view class="person-info">
+      <view class="person-name">{{realName}}
+        <text class="type">综合经营</text>
+      </view>
+    </view>
+    <view class="person-server">
+      <view class="p-server-item" wx:if='{{person}}'>
+        <image src="../../mock/images/rich/icon_31.png" class="p-server-icon"></image>
+        <text class="p-server-name">个人</text>
+      </view>
+      <view class="p-server-item" wx:if='{{real}}'>
+        <image src="../../mock/images/rich/icon_32.png" class="p-server-icon"></image>
+        <text class="p-server-name">实名认证</text>
+      </view>
+      <view class="p-server-item" wx:if='{{cofco}}'>
+        <image src="../../mock/images/rich/icon_33.png" class="p-server-icon"></image>
+        <text class="p-server-name">无央会员</text>
+      </view>
+      <view class="p-server-item" wx:if='{{service}}'>
+        <image src="../../mock/images/rich/icon_34.png" class="p-server-icon"></image>
+        <text class="p-server-name">贸易商</text>
+      </view>
+    </view>
+  </view>
+  <!-- 服务列表 -->
+  <scroll-view class="server-list" scroll-x="true">
+    <view class="server-item">
+      <view class="server-icon-wrap">
+        <image src='../../mock/images/rich/icon_40.png' class="server-icon"></image>
+      </view>
+      <view class="server-name">医疗服务</view>
+    </view>
+    <view class="server-item">
+      <view class="server-icon-wrap">
+        <image src='../../mock/images/rich/icon_43.png' class="server-icon"></image>
+      </view>
+      <view class="server-name">律师服务</view>
+    </view>
+    <view class="server-item">
+      <view class="server-icon-wrap">
+        <image src='../../mock/images/rich/icon_45.png' class="server-icon"></image>
+      </view>
+      <view class="server-name">保险服务</view>
+    </view>
+    <view class="server-item">
+      <view class="server-icon-wrap">
+        <image src='../../mock/images/rich/icon_47.png' class="server-icon"></image>
+      </view>
+      <view class="server-name">农具服务</view>
+    </view>
+  </scroll-view>
+  <!-- 提出建议 -->
+  <view class="suggestion">
+    <!-- <view class="suggestion-title">提出建议</view> -->
+    <form bindsubmit="bindFormSubmit">
+      <textarea textarea fixed="true" wx:if="{{textDisabled}}" bindblur="textareaBlur" class="suggestion-content" placeholder="请输入需求 ... ..." name="suggestion" value="{{suggetionContent}}"></textarea>
+      <view class="mock-textarea" wx:else></view>
+      <!-- <button class="rich-rule" plain=" " type="primary" catchtap="showRichRule">致富规则</button> -->
+      <button class="rich-submit" form-type="submit">提交</button>
+    </form>
+  </view>
+  <view class="rich-rule">还不了解致富规则？
+    <text class="font-color" catchtap="showRichRule">立即了解</text>
+  </view>
+  <!-- 弹出框(致富规则) -->
+  <view catch:touchmove='catch' hidden="{{richRuleShow}}" class="a">
+    <view class="rule-content">
+      <!-- <view class="rule-title">致富规则</view> -->
+      <image src="../../mock/images/rich/myrich_icon_03.png" class="rule-image"></image>
+      <scroll-view class="rule-policy" scroll-y>
+        <view wx:for="{{myWtorich}}" class="policy-item">
+          <view class="policy-item-index">{{index + 1}}
+          </view>
+          {{item.ruleDetail}}
+        </view>
+      </scroll-view>
+      <!-- <button catchtap="hideRichRule" class="close">关闭</button> -->
+      <view class="close" catchtap="hideRichRule">
+        <text>我了解了</text>
+      </view>
+    </view>
+    <!-- 遮罩层 -->
+    <view class="mask"></view>
+  </view>
+</template>

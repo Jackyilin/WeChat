@@ -1,0 +1,56 @@
+page{
+  height: 100%;
+  background: #eee;
+}
+.radio-group{
+  text-align: center;
+  margin-bottom: 50rpx;  
+  margin-top: 20rpx;      
+}
+.mFun{
+  background: #fff;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;    
+}
+.mFun>view{
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  font-size: 32rpx;
+  height: 360rpx;
+  line-height: 70rpx;
+}
+.mFun .mFun-last{
+  border: 1px solid #bbb;
+}
+.box{
+   margin: 0 5% 0 10%;  
+   display: flex;
+   justify-content: space-between; 
+}
+.box input{
+  margin-top: 10rpx;
+  width: 100%;
+  height: 300rpx;
+}
+.box-btn{
+  color: #ccc;
+  font-size: 28rpx;
+}
+
+.setMsg{
+  font-size: 32rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20rpx;    
+  width: 90%;
+  bottom: 20rpx;  
+  background: #1AAD19;
+}
+.setText{
+  text-align: center;
+  color: #fff;
+}

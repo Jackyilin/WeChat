@@ -1,0 +1,111 @@
+<!--pages/mine/home/home.wxml-->
+<view class='home'>
+   <view class='basic'>
+    <view class='basic-up'>
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524479692029&di=12b6f1843b0a4dd0c66bf4e4e40b86e0&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3Ddf48815fa7345982d187edd1649d5bd8%2Fb3b7d0a20cf431ad837a56124136acaf2edd9874.jpg' mode='aspectFill'></image>
+    </view>
+    <view class='basic-down'>
+      <image src='http://{{open[0].headPortrait}}'></image>
+      <view class='basic-info'>
+        <image class='im' src='../../../mock/images/mine/home_name.jpg'></image>
+        <view class='b-i-title'>名 称:</view>
+        <view class='b-i-info'>{{open[0].username}}</view>
+      </view>
+      <view class='basic-info'>
+        <image class='im' src='../../../mock/images/mine/home_phone.jpg'></image>      
+        <view class='b-i-title'>手 机:</view>
+        <view class='b-i-info'>{{open[0].tel}}</view>
+      </view>
+      <view class='basic-info'>
+        <image class='im' src='../../../mock/images/mine/home_idcard.jpg'></image>      
+        <view class='b-i-title'>身 份:</view>
+        <view class='b-i-info'>{{open[0].identityStatus}}</view>
+      </view>     
+    </view>
+  </view>
+  <view class='marks'>
+    <image wx:if="{{true}}" class='mark' src='../../../mock/images/common/index_13.png'></image>
+                     <image wx:else class='mark' src='../../../mock/images/common/index_34.png'></image>
+    <view>个人</view>
+    <image wx:if="{{open[0].realNameIdentity}}" class='mark' src='../../../mock/images/common/index_12.png'></image>
+                    <image wx:else class='mark' src='../../../mock/images/common/index_36.png'></image>
+     <view>实名认证</view> 
+     <image wx:if="{{open[0].ismember}}"  class='mark' src='../../../mock/images/common/index_21.png'></image>
+                    <image wx:else class='mark' src='../../../mock/images/common/index_02.png'></image> 
+     <view>无央会员</view> 
+     <image wx:if="{{open[0].serviceAuthority}}"  class='mark' src='../../../mock/images/common/hh_22.png'></image>
+                    <image wx:else class='mark' src='../../../mock/images/common/index_03.png'></image>  
+     <view>贸易商</view>    
+  </view>
+  <view class='detail'>
+    <view class='detail-info'>
+      <view class='d-i-title'>经营范围</view>
+      <view class='d-i-cont'>{{userInfo.businessScope}}</view>
+    </view>
+    <view class='detail-info'>
+      <view class='d-i-title'>所在地区</view>
+      <view class='d-i-cont'>黑龙江省</view>
+    </view>
+    <view class='detail-info'>
+      <view class='d-i-title'>客户实力</view>
+      <view class='d-i-cont'>
+        <block wx:for="{{imgList}}">
+          <image class='   MX4' src='http://{{item}}'></image>
+        </block>
+      </view>
+    </view>
+    
+    <!-- <view class='detail-info'>
+      <view class='d-i-title'>{{name}}</view>
+      <view class='d-i-cont'>{{cont}}</view>
+    </view> -->
+  </view>
+  <view class='post-infor'>
+      <view class='d-i-title'>发布信息</view>
+      <!-- <view class='d-i-cont' v-if="{{}}">{{客户没有发布任何信息}}</view> -->
+      <view class='d-i-cont'>
+        <blcok wx:for="{{postList}}">
+          <view class="postItem">
+            <view class="fenlei">
+              <view class="name">{{item.category}}</view>
+              <view class="price">
+                <image class="price-icon" src="../../../mock/images/icon/index_22.png"></image>
+                <text class="unit-price">{{item.price}}元/吨</text>
+              </view>
+            </view>
+            <view class="post-info">
+              <view class="colu">
+                <view class="left">
+                  品牌: {{item.brand}}
+                </view>
+                <view class="right">
+                  品牌: 东北
+                </view>
+              </view>
+              <view class="colu">
+                <view class="left">
+                  交货地: {{item.place + item.region}}
+                </view>
+                <view class="right">
+                  规格: 00000
+                </view>
+              </view>
+              <view class="colu">
+                <view class="left">
+                  <image class="sellers_auto_img" src="../../../mock/images/icon/index_78.png"></image>
+                </view>
+                <view class="right">
+                    <image id='time' src='../../../mock/images/icon/index_48.png'></image>
+                    <text id="time">{{item.update_time?item.update_time:item.create_time}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </blcok>
+      </view>
+  </view>
+  <view class='bottom' wx:if="{{!myself}}">
+    <button class='fellow' bindtap='fellow'>关注</button>
+    <button class='call' bindtap='call'>打电话</button>    
+  </view>
+</view>

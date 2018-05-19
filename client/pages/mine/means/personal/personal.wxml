@@ -1,0 +1,31 @@
+<view class='msg'>
+  <view class='title'>用户名:</view>
+  <view class='content' bindtap='notice'>{{username}}</view>
+</view>
+<view class='msg'>
+  <view class='title'>名 称:</view>
+  <input placeholder='点击填写真实姓名' bindinput='saveName'></input>
+</view>
+<view class='msg'>
+  <view class='title'>电 话:</view>
+  <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"><view class='content'>微信手机号</view> </button> -->
+  <input type="number" placeholder='点击输入联系电话' bindinput='saveTel'></input>
+</view>
+<view class='msg' id='mine'  >
+  <view class='title' >地 区:</view>
+    <!-- <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+<!-- 显示数据 -->
+<view class='sp'>
+<!--引用自定义组件  -->
+  <address id="address" bindmyevent='OnMyEvent'></address>
+</view>
+  <!-- </picker>  -->
+</view>
+<view class='msg msgS'>
+  <view class='title'>详 细:</view>
+  <input placeholder='点击输入详细地址' class='inputS' bindinput='saveDetailPlace'></input>
+</view>
+
+<view class='setMsg' bindtap='submit'>
+  <view class='setText'>提交</view>
+</view>

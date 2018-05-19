@@ -1,0 +1,46 @@
+<!--pages/mine/notice/notice.wxml-->
+<import src='../common/empty.wxml' />
+
+<view id='recIntent'>
+   <block wx:if='{{intentions.length==0}}'>
+    <template is='empty' data="{{text:'您还未关注其他用户'}}" />
+  </block> 
+   <block wx:else> 
+    <view wx:for='{{notices}}' wx:key='{{index}}'>
+      <view class='intention'>
+        <view class='intention-sponsor'>
+          <view class='i-s-up'>
+            <view class='i-s-left'>
+              <image src='../../../mock/images/rich/avatar.jpg' class='portrait'></image>
+            </view>
+            <view class='i-s-center'>
+              <view class='i-s-name'>{{item.username}}</view>
+              <view class='i-s-business'>{{item.business}}</view>
+            </view>
+            <view class='i-s-right'>
+              <navigator url="../home/home?user_oid={{item.openid}}" hover-class='none'>
+                <button size='mini' type='default'>查看详细</button>
+              </navigator>
+            </view>
+          </view>
+          <view class='i-s-down'>
+            <view class='image-wrapper'>
+              <image src='../../../mock/images/mine/bjge.jpg' class='mark'></image>
+              <view>个人</view>
+            </view>
+            <view class='image-wrapper'>
+              <image src='../../../mock/images/mine/bjshi.jpg' class='mark'></image>
+              <view>实名认证</view>
+            </view>
+            <view class='image-wrapper'>
+              <image src='../../../mock/images/mine/bjv.jpg' class='member'></image>
+              <view>无央会员</view>
+            </view>
+            <button size='mini' type='default' bindtap='call' data-tel="{{item.tel}}"></button>
+          </view>
+        </view>
+        
+      </view>
+    </view>
+  </block> 
+</view>

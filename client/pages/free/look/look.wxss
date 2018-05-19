@@ -1,0 +1,255 @@
+/* pages/rich/look/look.wxss */
+
+.search-box{
+  display: flex;
+  margin-top: 20rpx;
+  margin-left: 45rpx;
+  align-items: center;
+  justify-content: flex-start;
+}
+.searchbox{
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.search{
+  width: 520rpx;
+  height: 60rpx;
+  border:5rpx solid #7fc7a1;
+  border-radius:10rpx;  
+  display: inline-block;
+  margin-right: 20rpx;
+}
+
+.btn-search{
+   width: 120rpx; 
+   height: 70rpx;
+   font-size: 28rpx; 
+   line-height: 70rpx;
+   color: #7fc7a1;
+   margin: 0;
+}
+.btn-search::after{
+   border: 6rpx solid #7fc7a1;
+  
+}
+.classitify {
+     display: flex;
+     flex-direction: row;
+     margin: 20rpx 0 10rpx 40rpx;
+     height: 70rpx;
+}
+
+.comm {
+     width: 146rpx;
+     height: 46rpx;
+     border: 1px solid #7fc7a1;
+     text-align: center;
+     line-height: 46rpx;
+     font-size: 28rpx;
+     color: #7fc7a1;
+     margin-right: 20rpx;
+     border-radius: 8rpx;
+}
+
+/* <弹窗> */
+
+.modal-mask {
+     width: 100%;
+     height: 100%;
+     position: fixed;
+     top: 0;
+     left: 0;
+     background: #000;
+     opacity: 0.5;
+     overflow: hidden;
+     z-index: 9000;
+     color: #fff;
+}
+.modal-mask input{
+  font-size: 28rpx;
+}
+.modal-dialog {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 15%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  font-size: 30rpx;
+  color: #333333;
+  /* margin-bottom: 80rpx; */
+  /* margin: -180rpx 105rpx; */
+  /* border-radius: 36rpx; */
+}
+.unit{
+     margin-top: 20rpx;
+     margin-left: 45rpx;
+     margin-bottom: 20rpx;
+}
+.weight{
+     display: flex;
+     flex-direction: row;
+     margin-left: 45rpx;
+     margin-bottom: 60rpx;
+}
+.weight-comm{
+     width: 120rpx;
+     height: 65rpx;
+     border: 1px solid #7fc7a1;
+     border-radius: 8rpx;
+     text-align: center;
+     line-height: 65rpx;
+     margin-right: 12rpx;
+     color: #7fc7a1;
+}
+.unit-selected{
+  background-color: #7fc7a1;
+  color: #fff;
+}
+.num, .price{
+     margin-left: 45rpx;
+     margin-bottom: 16rpx;
+}
+.range{
+     display: flex;
+     flex-direction: row;
+     margin-bottom: 40rpx;
+     color: #7fc7a1;
+}
+.range-comm{
+     margin: 0 auto;
+     
+}
+.range-comm input{
+     border: 1px solid #7fc7a1;
+     border-radius: 8rpx;
+     width: 200rpx;
+     color: #7fc7a1
+}
+
+.btn-footer{
+     display: flex;
+     flex-direction: row;
+     width: 554rpx; 
+     margin: 30rpx auto;
+}
+.footer-comm{
+     width: 250rpx;
+     height: 50rpx;
+     line-height: 50rpx;
+     font-size: 34rpx;
+     text-align: center;
+     background: #7fc7a1;
+     border-radius: 8rpx;
+     color: #fff;
+} 
+.reset{
+     margin-right: 50rpx;
+     background: #ffffff;
+     color: #7fc7a1;
+     width: 246rpx;
+     height: 46rpx;
+     line-height: 46rpx;
+     border: 2rpx solid #7fc7a1;
+}
+.message-buy,.message-sell{
+  width: 100%;
+  border-top:15rpx solid #eee;
+  height: 310rpx;
+}
+.mesheader{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+}
+.sbkind,.sbprice{
+  height: 100rpx;
+}
+.iconsellbuy{
+  width: 51rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  margin: 21rpx;
+  float: left;
+}
+.meskind{
+  font-size: 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: inline-block; 
+}
+.icon-bprice{
+  width: 33rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  margin: 33rpx 10rpx 33rpx 33rpx;
+  float: left;
+}
+.mes-bprice,.mes-sprice{
+  font-size: 28rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: inline-block; 
+  margin-right: 21rpx;
+}
+.mes-bprice{
+  color:#7fc7a1;
+}
+.mes-sprice{
+  color: #3fc1f5;
+}
+.mescontent{
+  border-top: 3rpx solid #eee;
+  margin: 0 21rpx; 
+  height: 207rpx;
+  display: flex;
+  flex-direction: column;
+}
+.mctop,.mcmid,.mcbottom{
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+ .mcbottom{
+  display: flex;
+  align-items: center;
+} 
+.mcbright{
+  display: flex;
+  align-items: center;
+}
+.mes{
+  font-size: 28rpx;
+}
+.mestext{
+  font-size: 28rpx;
+  color:#8c8c8c;
+}
+.onlinebuy{
+  width: 218rpx;
+  height: 60rpx;
+}
+.personal,.realname,.merchant,.vip,.coop{
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 12rpx;
+}
+.time{
+  width: 36rpx;
+  height: 32rpx;
+  float: left;
+}
+
+.tab-item { 
+width: 33.3%; 
+text-align: center; 
+font-size: 15px; 
+color: #777; 
+} 
+
+

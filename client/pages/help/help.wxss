@@ -1,0 +1,85 @@
+/* pages/help/help.wxss */
+/*选择地区*/
+@import '../common/common.wxss';
+.poverty-section{
+  width: 580rpx;
+  position: relative;
+  top: 10rpx;
+}
+/*顶部按钮选择地区*/
+ .poverty-section .addstyle{
+  border: 1rpx solid #eee;
+  margin: 10rpx;
+  text-align: center;
+} 
+/*按钮操作  */
+.poverty-button{
+  position: absolute;
+  top: 0rpx;
+  right: -160rpx;
+}
+.poverty-button button{
+  background-color: #7FC7A1;
+  margin: 5rpx;
+}
+/*下部背景*/
+.poverty-content{
+  background-color: #F4F4F4;
+  width: 730rpx;
+  height:1140rpx;
+  margin: 0 auto;  
+}
+/*白皮书标题*/
+.poverty-writeBook-title{
+  padding-top: 20rpx;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30rpx;
+  font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+  color: #000;
+  display: flex;
+  justify-content: center;
+  margin: 20rpx 0 20rpx 0;
+}
+/*白线  */
+.line-css{
+    height: 2rpx;
+    background: #fff;
+    width: 620rpx;
+    margin: 0 auto 20rpx;
+}
+/*政策内容  */
+.poverty-subcontent{
+  height: 1020rpx;
+  background-color: #fff;
+  box-shadow: 10rpx 10rpx 10rpx rgba(-10rpx, 0, 0, 0.349019607843137);
+  color: #000;
+  margin: 0 20rpx;
+  text-align: left;
+}
+/*规定条目*/
+.poverty-writeBook-details.choice:first-child{ 
+  border-top: 4rpx solid #e6e6e6;
+}
+/*显示白皮书中所有的政策  */
+.poverty-writeBook-details{
+  background-color: #fff;  
+  font-size: 28rpx;
+  color: #000;
+  margin: 0 auto;
+  padding: 20rpx 20rpx; 
+  border-bottom: 4rpx dashed #e6e6e6;
+}
+.poverty-writeBook-details.choice:nth-last-child(2){ 
+  border-bottom: 4rpx solid #e6e6e6;
+}
+/*查看更多  */
+.show_more{
+  color: #fff;
+  display:flex;
+  justify-content: center;
+  padding-bottom: 10rpx;
+}
+.show_more button{
+  background-color: #7FC7A1;
+}

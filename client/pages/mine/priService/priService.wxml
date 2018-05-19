@@ -1,0 +1,18 @@
+<!--pages/mine/priService/priService.wxml-->
+<view>
+  <scroll-view scroll-y class='pri'>
+    <view class='pri-box'>
+      <view class='pri-title'>积分兑换</view>
+      <image src='../../../../mock/images/credits.jpg' bindtap='notice'></image>
+    </view>
+    <view class='pri-box'>
+      <view class='pri-title'>VIP特权</view>
+      <image src='../../../../mock/images/VIP.jpg' bindtap='notice'></image>
+    </view>
+    <view class='pri-box'>
+      <view class='pri-title'>无央特权</view>
+      <image src='../../../../mock/images/endless.jpg' bindtap='notice'></image>
+    </view>
+  </scroll-view>
+  <button class='myButton'>立即加入无央</button>
+</view>

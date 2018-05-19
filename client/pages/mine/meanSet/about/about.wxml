@@ -1,0 +1,27 @@
+<view class='header'>
+  <view class='header-box box'>
+    <image class='mImg' src='../../../../mock/images/mine/wylogo.jpeg'></image>
+  </view>
+</view>
+<view class='name'>无央科技</view>
+<view class='version'>V 1.0.0</view>
+
+<!--pages/mine/means/means.wxml-->
+
+<view class='mFun'>
+  <view>
+    <navigator url='copyright/copyright'>
+      <view class='box'>版权声明</view>    
+    </navigator>
+  </view>
+  <view>
+    <navigator url='feedback/feedback'>
+      <view class='box'>信息发布制度</view>    
+    </navigator>
+  </view>
+  <view>
+    <navigator url='about/about'>
+      <view class='box'>买卖规则</view>    
+    </navigator>
+  </view>
+</view>

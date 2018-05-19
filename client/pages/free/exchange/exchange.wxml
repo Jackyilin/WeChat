@@ -1,0 +1,33 @@
+<!--pages/free/exchange/exchange.wxml-->
+<view class='header'>
+  <view class='header-left'>
+    <image class='person' src='http://{{identity.wxHeadPottarat}}'></image>
+    <view class='content-right'>
+      <view class='name'>{{identity.username}}</view>
+      <view class='identity'>{{identity.identityStatus}}</view>
+    </view>
+  </view>
+
+  <view class='header-right'>
+    <view class='mine'>我的积分</view>
+    <view class='total-integral'>
+      <image class='money' src='../../../mock/images/inte/money.png'></image>
+      <view class='amount'>{{myPoint}}</view>
+    </view>
+  </view>
+</view>
+
+<view class='introduce' wx:for='{{array}}'>
+  <view class='gift'>
+  <image src='../../../mock/images/inte/red.png'></image>
+  </view>
+    <view class='content'>
+      <view class='prize'>{{item.giftName}}</view>
+      <view class='count'>{{item.needIntegral}}</view>
+      <view class='information'>{{item.status}}</view>
+    </view>
+      <view class='button' bindtap='myId' data-id="{{index}}">
+        <button class='exchange'>兑换</button>
+      </view>
+</view>
+

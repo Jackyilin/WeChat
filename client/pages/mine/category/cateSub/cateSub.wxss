@@ -1,0 +1,33 @@
+/* pages/mine/category/cateSub/cateSub.wxss */
+.sub-title{
+  /* color: #1AAD19; */
+  margin: 10rpx 16rpx;
+  font-size: 32rpx;
+}
+.sub-sub{
+  display: inline-block;
+  width: 150rpx;
+  height: 50rpx;
+  font-size: 28rpx;
+  color: #ccc;
+  border: 2rpx solid #ccc;
+  text-align: center;
+  line-height: 50rpx;
+  margin: 10rpx 16rpx;
+}
+.sub-sub.selected{
+  color: #fff;
+  background: #1AAD19;
+}
+.add{
+  width: 90%;
+  position: absolute;
+  bottom: 20rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20rpx;
+  background: #1AAD19;
+  font-size: 32rpx;
+}

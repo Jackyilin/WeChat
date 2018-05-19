@@ -1,0 +1,100 @@
+{
+  "pages": [
+      "pages/free/buy/buy",
+      "pages/free/address/address",
+      "pages/mine/mine",
+      "pages/order/dredge/dredge",
+    "pages/free/free",
+    
+    
+    "pages/free/exchange/exchange",
+    "pages/free/integral/integral",
+    "pages/free/money/money",
+    "pages/free/publish/publish",
+    "pages/free/look/look",
+    "pages/free/search/search",
+    "pages/free/success/success",
+    "pages/free/sellers/sellers",
+    "pages/order/order",
+    "pages/help/help",
+    "pages/help/showMore/showMore",
+    "pages/help/helpmore/helpmore",
+    "pages/help/helpmore/applyPoverty/applyPoverty",
+    "pages/help/helpmore/povertyMessage/povertyMessage",
+    "pages/rich/rich",
+    "pages/rich/login/login",
+    
+    "pages/mine/means/personal/personal",
+    "pages/mine/means/strength/strength",
+    "pages/mine/means/means",
+    "pages/mine/realName/realName",
+    "pages/mine/means/status/status",
+    "pages/mine/meanSet/about/about",
+    "pages/mine/meanSet/feedback/feedback",
+    "pages/mine/meanSet/meanSet",
+    "pages/mine/setMeans/setMeans",
+    "pages/mine/setMeans/setMail/setMail",
+    "pages/mine/setMeans/setFax/setFax",
+    "pages/mine/setMeans/setQQ/setQQ",
+    "pages/mine/setMeans/setName/setName",
+    "pages/mine/setMeans/setWeb/setWeb",
+    "pages/mine/setMeans/setSyn/setSyn",
+    "pages/mine/home/home",
+    "pages/mine/category/category",
+    "pages/mine/category/cateSub/cateSub",
+    "pages/mine/priService/priService",
+    "pages/mine/collect/collect",
+    "pages/mine/notice/notice",
+    "pages/mine/hisTrace/hisTrace",
+    "pages/mine/checkHistory/checkHistory",
+    "pages/mine/integration/integrationDetail/integretionDetail",
+    "pages/mine/integration/integretion",
+    "pages/mine/pubInfor/pubInfor",
+    "pages/mine/recIntent/recIntent"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "微信",
+    "navigationBarTextStyle": "#2aa7de"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#1aad19",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/free/free",
+        "text": "自由买卖",
+        "iconPath": "mock/images/tabbar/tabbar-free.png",
+        "selectedIconPath": "mock/images/tabbar/tabbar-free-act.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单买卖",
+        "iconPath": "mock/images/tabbar/tabbar-order.png",
+        "selectedIconPath": "mock/images/tabbar/tabbar-order-act.png"
+      },
+      {
+        "pagePath": "pages/help/help",
+        "text": "精准扶贫",
+        "iconPath": "mock/images/tabbar/tabbar-help.png",
+        "selectedIconPath": "mock/images/tabbar/tabbar-help-act.png"
+      },
+      {
+        "pagePath": "pages/rich/rich",
+        "text": "致富",
+        "iconPath": "mock/images/tabbar/tabbar-rich.png",
+        "selectedIconPath": "mock/images/tabbar/tabbar-rich-act.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "mock/images/tabbar/tabbar-me.png",
+        "selectedIconPath": "mock/images/tabbar/tabbar-me-act.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+
+<view class='mFun'>
+  <view>
+    <navigator url='setMail/setMail'>
+      <view class='box'>邮箱</view>    
+    </navigator>
+  </view>
+  <!-- <view>
+    <navigator url='setFax/setFax'>
+      <view class='box'>传真</view>    
+    </navigator>
+  </view> -->
+  <view>
+    <navigator url='setQQ/setQQ'>
+      <view class='box'>QQ号码</view>    
+    </navigator>
+  </view>
+  <view>
+    <navigator url='setName/setName'>
+      <view class='box'>公司名称</view>    
+    </navigator>
+  </view>
+  <view>
+    <navigator url='setWeb/setWeb'>
+      <view class='box'>公司网站</view>    
+    </navigator>
+  </view>
+  <view>
+    <navigator url='setSyn/setSyn'>
+      <view class='box'>公司简介</view>    
+    </navigator>
+  </view>
+</view>

@@ -1,0 +1,134 @@
+/* pages/help/helpmore/povertyMessage/povertyMessage.wxss */
+.title{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 80rpx;
+}
+.darkline{
+  background-color: #e9e9e9;
+  height: 20rpx;
+}
+.img-title{
+  width: 32rpx;
+  height: 32rpx;
+}
+.pM-title{
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.household_msg view{
+  color: #ccc;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.household_msg text{
+  color: #000;
+  font-weight: 600;
+}
+.household_content{
+  position: relative;
+}
+/*户主姓名旁边的小图片  */
+.household_msg .household_photo{
+  display: inline-block;
+  padding: 20rpx 0 0 20rpx;
+}
+.household_msg .household_photo image{
+  width: 10rpx;
+  height: 40rpx;
+}
+/*户主姓名  */
+.household_msg .household_name{
+  display: inline-block;
+  position: absolute;
+  top: 20rpx;
+  padding-left: 20rpx;
+}
+/*下方的线  */
+.line{
+  height: 3rpx;
+  margin: 10rpx;
+  background-color: #ccc;
+}
+/* 户主下方数据 */
+.household_container{
+  display: flex;
+  padding-bottom: 40rpx;
+  margin-left: 40rpx;
+}
+.household_container .household_left{
+  flex: 1;
+}
+.household_container .household_right{
+  flex: 1;
+}
+.household_container .household_left view,.household_container .household_right view{
+  padding: 10rpx;
+}
+/*中间部分  */
+.darkline{
+  position: relative;
+}
+.middle_photo{
+  width: 20rpx;
+  height: 70rpx;
+}
+.middle_photo.left{
+  position: absolute;
+  top: -25rpx;
+  left: 20rpx;
+}
+.middle_photo.right{
+  position: absolute;
+  top: -25rpx;
+  right: 20rpx;
+}
+/*扶贫信息下方数据  */
+.poverty_msg{
+  padding-top: 40rpx;
+}
+.poverty_msg .poverty_subtitle{
+  position: relative;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+/*扶贫信息旁边的小图片  */
+.poverty_subtitle .poverty_photo{
+  display: inline-block;
+  padding: 20rpx 0 0 20rpx;
+}
+.poverty_subtitle .poverty_photo image{
+  width: 10rpx;
+  height: 40rpx;
+}
+.poverty_subtitle text{
+  position: absolute;
+  top: 20rpx;
+  padding-left: 20rpx;
+}
+.poverty_container{
+  display: flex;
+  position: relative;
+}
+.poverty_left,.poverty_right{
+  flex: 1;
+}
+.poverty_left view{
+  padding: 10rpx;
+  margin-left: 40rpx; 
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #ccc; 
+}
+.poverty_left text{
+  color: #000; 
+}
+.poverty_container .poverty_right image{
+  position: absolute;
+  width: 280rpx;
+  height: 280rpx;
+  padding: 20rpx;
+  top: -90rpx;
+  right: 30rpx;
+}

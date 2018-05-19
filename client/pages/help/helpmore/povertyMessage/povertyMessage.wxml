@@ -1,0 +1,54 @@
+<!--pages/help/helpmore/povertyMessage/povertyMessage.wxml-->
+<view class='title'>
+  <image src='../../../../mock/images/help_img/img-title.png' class='img-title'></image> 
+  <view class="pM-title">黑龙江省哈尔滨市宁安县</view>
+</view>
+<view class='darkline'></view>
+<view class='household_msg'>
+  <view class="household_content">
+    <view class='household_photo'>
+      <image src="../../../../mock/images/help_img/household_photo.png"></image>
+    </view>
+    <view class='household_name'>{{data.poorName}} <text>户主</text></view>
+  </view>
+  <view class='line'></view>
+  <view class='household_container'>
+    <view class='household_left'>
+        <view><text>人均收入：</text>{{data.salary}}元/年</view>
+        <view><text>耕地面积：</text>{{data.agriculturalAcreage}}亩</view>
+        <view><text>致贫原因：</text>{{data.reason}}</view>
+    </view>
+    <view class='household_right'>
+        <view><text>家庭人口数：</text>{{data.family}}人</view>
+        <view><text>劳动力人口数：</text>{{data.labour}}人</view>
+    </view>
+  </view>
+</view>
+<view class='middle'>
+  <view class='darkline'>
+    <image src='../../../../mock/images/help_img/middle_right.png' class='middle_photo left'></image> 
+    <image src='../../../../mock/images/help_img/middle_right.png' class='middle_photo right'></image>
+  </view> 
+</view>
+<view class='poverty_msg'>
+  <view class='poverty_subtitle'>
+    <view class="poverty_photo">
+      <image src="../../../../mock/images/help_img/household_photo.png"></image>
+    </view>
+    <text>扶贫信息</text>
+  </view>
+  <view class='line'></view>
+  <view class='poverty_container'>
+    <view class='poverty_left'>
+      <view><text>扶贫措施：</text>{{data.measure}}</view>
+      <view><text>扶贫时间：</text>{{data.assistTime}}</view>
+      <view><text>人均增收目标：</text>{{data.target}}元</view>
+      <view></view>
+      <view><text>帮扶责任人姓名：</text>{{data.assistantMan}}</view>
+      <view><text>帮扶单位：</text>{{data.assistant}}</view>
+    </view>
+    <view class='poverty_right'>
+      <image src='../../../../mock/images/help_img/seal.png'></image>
+    </view>
+  </view>
+</view>

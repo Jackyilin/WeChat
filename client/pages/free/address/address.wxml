@@ -1,0 +1,39 @@
+<!--pages/free/adress/adress.wxml-->
+<view class='box'>
+<view class='harvest-address'>收货地址</view>
+<view class="itemView">
+  <label class='contact'>收货人：</label>
+  <input class="input" name="userName" placeholder="姓名"
+    bindinput ="userNameInput" type='text'/>
+</view>
+
+<view class="itemView">
+  <label class='call'>联系电话：</label>
+  <input class="input"  name="phone" number placeholder="手机或电话" bindinput="phoneInput" type='number'/>
+</view>
+
+<view class="itemView">
+  <label class='choose'>选择地区：</label>
+  <view class='address'>
+    <picker  mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">{{region[0]}}，{{region[1]}}，{{region[2]}}</picker>
+  </view>
+</view>
+
+<view class="itemView">
+  <label class='location'>详细地址：</label>
+  <input class="input" name="location" bindinput='addressInput' 
+  placeholder="街道门牌信息"maxlength='-1'></input>
+</view>
+
+<view class="itemView">
+  <label class='zip-code'>邮政编码：</label>
+  <input class="input" type='number' placeholder="" bindinput='codeInput'></input>
+</view>
+</view>
+
+<view class="viewName">
+  <button class="submitBtn" bindtap='toIndex'>
+    确认提交
+    </button>
+</view>
+

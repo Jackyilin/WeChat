@@ -1,0 +1,35 @@
+
+.msg{
+  display: flex;
+  height: 400rpx;
+  padding-left: 70rpx;
+  line-height: 400rpx; 
+  font-size: 32rpx;  
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+.title{
+  flex: 1;
+}
+.msg input{
+  flex: 3;
+  height: 400rpx;
+  color: #000;
+}
+
+.setMsg{
+  font-size: 32rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20rpx;    
+  width: 90%;
+  bottom: 20rpx;  
+  background: #1AAD19;
+}
+.setText{
+  text-align: center;
+  color: #fff;
+}

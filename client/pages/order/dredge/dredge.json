@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#F8F8F8",
+  "backgroundColor": "#F8F8F8",
+  "navigationBarTitleText": "注册",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "address": "../../common/common"
+  }
+}

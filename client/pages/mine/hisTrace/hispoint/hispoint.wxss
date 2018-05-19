@@ -1,0 +1,27 @@
+/* pages/mine/hisTrace/hisTrace/jifen/jifen.wxss */
+.itemView{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1rpx #ccc solid;
+    height: 80rpx;
+    }
+    .input{
+    flex: 1;
+    background-color: rgb(249, 249, 249);
+    border-radius: 6rpx;
+    text-align: left;
+    }
+    .submit{
+    width: 300rpx;
+    height: 100rpx; 
+    margin-top: 100rpx;
+    text-align: center;
+    line-height: 100rpx;
+    font-size: 28rpx;
+    background-color: #7fc7a1; 
+    color: #fff;
+    }
+    .section{
+        margin: 0 30rpx;
+    }

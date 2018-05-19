@@ -1,0 +1,192 @@
+/* pages/mine/realName/realName.wxss */
+
+page {
+  position: fixed;
+  height: 100%;
+  background: #efefef;
+}
+
+.msgName {
+  margin-top:30rpx; 
+  display: flex;
+  height: 100rpx;
+  padding-left: 30rpx;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+.msgId { 
+  display: flex;
+  height: 100rpx;
+  padding-left: 30rpx;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+
+.title {
+  flex: 1;
+}
+
+.msgName input {
+  flex: 3;
+  height: 100rpx;
+  color: #000;
+}
+.msgId input {
+  flex: 3;
+  height: 100rpx;
+  color: #000;
+}
+
+.titleImg {
+  font-size: 32rpx;
+  background: #fff;
+  padding-left: 30rpx;
+  padding-top: 20rpx;
+}
+.bBox{
+  background: #fff;
+  height: 305rpx;
+  width: 100%;
+  display: flex;
+}
+.imgBox {
+  width: 350rpx;
+  padding-left: 30rpx;
+  padding-top: 20rpx;
+  height: 290rpx;
+}
+
+.imgBoxLast {
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.uploadImg {
+  background-size: 100% 100%;
+  /* background-image: url('https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=899637372,1047147562&fm=27&gp=0.jpg'); */
+  height: 200rpx;
+  margin-right: 30rpx;
+  flex: 1;
+  text-align: center;
+  line-height: 200rpx;
+  background-color: #f5f8ff;
+  color: #bbb;
+  font-size: 32rpx;
+  border-radius: 10rpx 10rpx 0 0;
+}
+
+.shot {
+  margin-right: 30rpx;
+  text-align: center;
+  background-color: #7fc7a1;
+  color: white;
+  border-radius: 0 0 10rpx 10rpx;
+}
+
+.demeImg {
+  height: 200rpx;
+  flex: 1;
+  position: relative;
+}
+
+.demoMsg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #1aad19;
+}
+
+.setMsg {
+  font-size: 32rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20rpx;
+  width: 90%;
+  bottom: 20rpx;
+  background: #1aad19;
+}
+
+.setText {
+  text-align: center;
+  color: #fff;
+}
+/*下部分 start */
+.shotReq{
+ 
+  margin-top:42rpx ;
+    background: #fff;
+  height: 580rpx;
+  width: 100%;
+}
+.tBtn{
+   margin-top: 30rpx;
+  background-color: #7fc7a1;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  color: white;
+}
+.reqBox{
+   margin-bottom: 30rpx;
+    margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.reqTitle{
+  padding-top: 20rpx;
+  margin-bottom: 20rpx;
+      margin-left: 30rpx;
+  margin-right: 30rpx;
+font-size:30rpx; 
+}
+.reqContent{
+  font-size: 28rpx;
+  color:#9D9D9D;
+}
+.reqImg{
+  display: flex;
+  width: 100%;
+  margin-left: 30rpx;
+  margin-right:30rpx; 
+}
+.reqImg image{
+  width: 200rpx;
+  height: 150rpx;
+  margin-right: 25rpx;
+}
+
+.reqBoxlit{
+  display: flex;
+  flex-direction: column;
+}
+.reqBoxlit view{
+  width: 200rpx;
+  text-align: center;
+    margin-right: 25rpx;
+    font-size: 28rpx;
+      color:#9D9D9D;
+}
+
+.setMsg{
+  font-size: 32rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20rpx;    
+  width: 90%;
+  bottom: 20rpx;  
+  background: #1AAD19;
+}
+.setText{
+  text-align: center;
+  color: #fff;
+}
+/*下部分 end */

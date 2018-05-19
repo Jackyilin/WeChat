@@ -1,0 +1,58 @@
+page{
+  height: 100%;
+  background: #eee;
+}
+.header{
+  height: 400rpx;
+}
+.header-box{
+  line-height: 200rpx;
+  height: 100%;
+  position: relative; 
+}
+.box{
+   margin: 0 5% 0 10%;  
+   display: flex;
+   justify-content: space-between; 
+}
+.box-btn{
+  color: #ccc;
+  font-size: 28rpx;
+}
+.box-btnS{
+  color: #f00;
+  font-size: 28rpx;
+}
+.mImg{
+  height: 90%;
+  width: 360rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 47%;
+  top: 50%;
+  transform: translate(-50%,-50%); 
+}
+
+.name{
+  color: #1AAD19;
+  font-size: 60rpx;
+  text-align: center;
+}
+.version{
+  color: #bbb;
+  font-size: 32rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.mFun{
+  /* margin-top: 30rpx; */
+  background: #fff;
+}
+.mFun>view{
+  border-bottom: 1px solid #eee;
+  font-size: 36rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #bbb;
+}

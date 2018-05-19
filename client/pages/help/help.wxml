@@ -1,0 +1,31 @@
+<view class="poverty-section">
+    <!-- <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <button type='default'>
+         {{region[0]}}，{{region[1]}}，{{region[2]}}
+      </button>
+    </picker> --> 
+    <view class='addstyle'>
+      <address id="address" bindmyevent='OnMyEvent'></address>
+    </view>
+    <view class='poverty-button'>
+      <button hover-class='none' class=" mini-btn" bindtap='change'size="mini"type="primary">确定</button>
+    </view>
+  
+</view>
+
+<view class="poverty-content">
+  <view class="poverty-writeBook">
+    <view class="poverty-writeBook-title">扶贫政策白皮书</view>
+    <view class="line-css"></view>
+  </view>
+  <view class="poverty-subcontent">
+        <view class="poverty-writeBook-details choice"  wx:for="{{helpdata}}">
+          {{item.id}}. {{item.policyDetail}}
+        </view>
+        <view class='show_more'>
+          <button hover-class='none' class=" mini-btn" bindtap="showMore" size="mini" type="primary">查看更多>></button> 
+        </view>
+  </view>  
+</view>
+
+

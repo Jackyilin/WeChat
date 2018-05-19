@@ -1,0 +1,11 @@
+<!--pages/help/showMore/showMore.wxml-->
+<view class="show-container">
+    <view class="line-css"></view>
+    <view class="show-details choice" wx:for="{{helpdata}}">
+          {{item.id}}. {{item.policyDetail}}
+    </view>
+    <view class='button-iknow'>
+      <button hover-class='none' class=" mini-btn " size="mini"type="primary" bindtap='iknow'>我了解了</button>
+    </view>
+</view>
+

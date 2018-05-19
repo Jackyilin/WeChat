@@ -1,0 +1,28 @@
+<image class="header" src="../../../mock/images/common/0180426110003.png">
+</image>
+<form action="#" methods="post">
+  <view class="phone">
+    <view class="phone-num">
+      <image src='../../../mock/images/common/register_photo.png' class='photo'></image>
+      <input class='telPhone' type='number' maxlength="11" name="phoneNum" bindinput="userNameInput" placeholder='请输入手机号' />
+      <view disabled="{{disabled}}" data-id="2" bindtap='{{(time=="获取验证码" || time=="重新获取")?"code":""}}' class="codee">{{time}}</view>
+    </view>
+  </view>
+  <view class="phone">
+    <view class="phone-num">
+      <image src='../../../mock/images/common/register_YDUI.png' class='photo'></image>
+      <input class='numberBottom' type='number' maxlength="6" name="phoneNum" bindinput="userCodeInput" placeholder='请输入6位手机验证码' />
+    </view>
+  </view>
+  <view class="footer">
+    <button bindtap='loginin'>登 录</button>
+    <text bindtap='priBotton'>还没有注册？<text class='register'>立即注册</text></text>
+  </view>
+  <view class='footWY'>
+    <view class='flexFoot'>
+      <view class='line'></view>
+      <view>无央科技版权所有</view>
+      <view class='line'></view>
+    </view>
+  </view>
+</form>

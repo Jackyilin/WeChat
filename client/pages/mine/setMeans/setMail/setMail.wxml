@@ -1,0 +1,9 @@
+
+<view class='msg'>
+  <view class='title'>邮 箱</view>
+  <input placeholder='请输入邮箱号' bindinput='getValue'></input>
+</view>
+
+  <view class='setMsg'>
+    <view class='setText' bindtap='yes'>确定</view>
+  </view>

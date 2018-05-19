@@ -1,0 +1,16 @@
+<radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio" wx:for="{{items}}" wx:key="{{index}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</radio-group>
+
+<view class='mFun'>
+  <view class='mFun-last'>
+    <view class='box'><input class='box-btn' placeholder='点击输入意见' bindinput='getValue'></input></view>
+  </view>    
+</view>
+  
+  <view class='setMsg'>
+    <view class='setText' bindtap='log'>确定</view>
+  </view>
+

@@ -1,0 +1,11 @@
+
+<view class='msg'>
+  <view class='title'>传 真</view>
+  <input placeholder='请输入传真号'></input>
+</view>
+
+<navigator>
+  <view class='setMsg'>
+    <view class='setText'>确定</view>
+  </view>
+</navigator>
